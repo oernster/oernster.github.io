@@ -27,10 +27,12 @@
       place-items: center;
       padding: 24px;
     }
-    main { width: 100%; max-width: 640px; }
+    main { width: 100%; max-width: 760px; }
     h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
     .role { color: #9da7b3; margin-top: 6px; font-size: 15px; }
-    .links { margin-top: 28px; display: grid; gap: 10px; }
+    .links { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: start; }
+    .links .wide { grid-column: 1 / -1; }
+    @media (max-width: 560px) { .links { grid-template-columns: 1fr; } }
     a.card {
       display: block;
       text-decoration: none;
@@ -86,7 +88,15 @@
         <div class="t">E:D Colonisation Assistant</div>
         <div class="d">Automatic colonisation and fleet carrier tracking from your journal</div>
       </a>
-      <a class="card" href="https://github.com/oernster">
+      <a class="card" href="https://oernster.github.io/Calendifier/">
+        <div class="t">Calendifier</div>
+        <div class="d">International desktop calendar with world holidays and a clock</div>
+      </a>
+      <a class="card" href="https://oernster.github.io/Trainer/">
+        <div class="t">Trainer</div>
+        <div class="d">UK train times with integrated weather and astronomy</div>
+      </a>
+      <a class="card wide" href="https://github.com/oernster">
         <div class="t">GitHub</div>
         <div class="d">github.com/oernster, the full collection of projects</div>
       </a>
