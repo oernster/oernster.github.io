@@ -27,10 +27,10 @@
       place-items: center;
       padding: 24px;
     }
-    main { width: 100%; max-width: 760px; }
+    main { width: 100%; max-width: 880px; }
     h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
     .role { color: #9da7b3; margin-top: 6px; font-size: 15px; }
-    .links { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: stretch; }
+    .links { margin-top: 28px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: stretch; }
     .links .wide { grid-column: 1 / -1; }
     @media (max-width: 560px) { .links { grid-template-columns: 1fr; } }
     a.card {
@@ -39,14 +39,19 @@
       color: #e6edf3;
       background: #11161c;
       border: 1px solid #1f2933;
-      border-radius: 12px;
-      padding: 14px 16px;
+      border-radius: 16px;
+      padding: 22px 24px;
       transition: border-color .15s ease;
     }
     a.card:hover, a.card:focus-visible { border-color: #2f81f7; outline: none; }
-    a.card .t { font-weight: 600; }
-    a.card .d { color: #9da7b3; font-size: 13.5px; margin-top: 2px; }
-</style>
+    a.card .hd { display: flex; align-items: center; gap: 14px; }
+    a.card .ic {
+      width: 34px; height: 34px; flex: 0 0 auto;
+      object-fit: contain; border-radius: 7px;
+    }
+    a.card .t { font-weight: 600; font-size: 18px; }
+    a.card .d { color: #9da7b3; font-size: 15.5px; margin-top: 6px; }
+  </style>
 </head>
 <body>
   <main>
@@ -55,47 +60,80 @@
 
     <div class="links">
       <a class="card" href="https://www.crankthecode.com">
-        <div class="t">Crank the Code</div>
+        <div class="hd">
+          <img class="ic" src="assets/crankthecode.png" alt="" width="34" height="34">
+          <span class="t">Crank the Code</span>
+        </div>
         <div class="d">The Decision Architecture thesis and writing</div>
       </a>
       <a class="card" href="https://oernster.github.io/fulcrum/">
-        <div class="t">Fulcrum</div>
+        <div class="hd">
+          <img class="ic" src="assets/fulcrum.png" alt="" width="34" height="34">
+          <span class="t">Fulcrum</span>
+        </div>
         <div class="d">Decision Architecture incarnate: the model made playable</div>
       </a>
-      <a class="card" href="https://www.narratex.co.uk">
-        <div class="t">NarrateX</div>
-        <div class="d">Listen to any book, hands-free, on any operating system</div>
-      </a>
-      <a class="card" href="https://oernster.github.io/ClearBudget/">
-        <div class="t">Clear Budget</div>
-        <div class="d">Forward-looking, offline desktop budget planner</div>
-      </a>
-      <a class="card" href="https://oernster.github.io/meridian/">
-        <div class="t">Meridian</div>
-        <div class="d">A calm MMSP, RSS and Atom feed reader</div>
-      </a>
       <a class="card" href="https://oernster.github.io/MMSP-Spec/">
-        <div class="t">MMSP</div>
+        <div class="hd">
+          <img class="ic" src="assets/mmsp.png" alt="" width="34" height="34">
+          <span class="t">MMSP</span>
+        </div>
         <div class="d">A multimedia evolution of RSS (draft specification)</div>
       </a>
-      <a class="card" href="https://oernster.github.io/o7Debrief/">
-        <div class="t">o7 Debrief</div>
-        <div class="d">Turn your Elite Dangerous journal into a shareable session debrief</div>
+      <a class="card" href="https://oernster.github.io/meridian/">
+        <div class="hd">
+          <img class="ic" src="assets/meridian.png" alt="" width="34" height="34">
+          <span class="t">Meridian</span>
+        </div>
+        <div class="d">A calm MMSP, RSS and Atom feed reader</div>
       </a>
-      <a class="card" href="https://oernster.github.io/EDColonisationAsst/">
-        <div class="t">E:D Colonisation Assistant</div>
-        <div class="d">Automatic colonisation and fleet carrier tracking from your journal</div>
+      <a class="card" href="https://oernster.github.io/ClearBudget/">
+        <div class="hd">
+          <img class="ic" src="assets/clearbudget.png" alt="" width="34" height="34">
+          <span class="t">Clear Budget</span>
+        </div>
+        <div class="d">Forward-looking, offline desktop budget planner</div>
+      </a>
+      <a class="card" href="https://www.narratex.co.uk">
+        <div class="hd">
+          <img class="ic" src="assets/narratex.png" alt="" width="34" height="34">
+          <span class="t">NarrateX</span>
+        </div>
+        <div class="d">Listen to any book, hands-free, on any operating system</div>
       </a>
       <a class="card" href="https://oernster.github.io/Calendifier/">
-        <div class="t">Calendifier</div>
+        <div class="hd">
+          <img class="ic" src="assets/calendifier.png" alt="" width="34" height="34">
+          <span class="t">Calendifier</span>
+        </div>
         <div class="d">International desktop calendar with world holidays and a clock</div>
       </a>
       <a class="card" href="https://oernster.github.io/Trainer/">
-        <div class="t">Trainer</div>
+        <div class="hd">
+          <img class="ic" src="assets/trainer.png" alt="" width="34" height="34">
+          <span class="t">Trainer</span>
+        </div>
         <div class="d">UK train times with integrated weather and astronomy</div>
       </a>
+      <a class="card" href="https://oernster.github.io/o7Debrief/">
+        <div class="hd">
+          <img class="ic" src="assets/o7debrief.png" alt="" width="34" height="34">
+          <span class="t">o7 Debrief</span>
+        </div>
+        <div class="d">Turn your Elite Dangerous journal into a shareable session debrief</div>
+      </a>
+      <a class="card" href="https://oernster.github.io/EDColonisationAsst/">
+        <div class="hd">
+          <img class="ic" src="assets/edca.png" alt="" width="34" height="34">
+          <span class="t">E:D Colonisation Assistant</span>
+        </div>
+        <div class="d">Automatic colonisation and fleet carrier tracking from your journal</div>
+      </a>
       <a class="card wide" href="https://github.com/oernster">
-        <div class="t">GitHub</div>
+        <div class="hd">
+          <img class="ic" src="assets/github.svg" alt="" width="34" height="34">
+          <span class="t">GitHub</span>
+        </div>
         <div class="d">github.com/oernster, the full collection of projects</div>
       </a>
     </div>
