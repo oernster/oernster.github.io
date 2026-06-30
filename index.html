@@ -33,7 +33,6 @@
     h2.section { margin-top: 34px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
     .links { margin-top: 16px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: stretch; }
     .links .wide { grid-column: 1 / -1; }
-    .links .newrow { grid-column: 1; }
     @media (max-width: 560px) { .links { grid-template-columns: 1fr; } }
     a.card {
       display: block;
@@ -59,6 +58,25 @@
   <main>
     <h1>Oliver Ernster</h1>
     <p class="role">Principal engineer: decision systems, backend architecture and authority design.</p>
+
+    <h2 class="section">Start Here</h2>
+
+    <div class="links">
+      <a class="card" href="https://www.crankthecode.com">
+        <div class="hd">
+          <img class="ic" src="assets/crankthecode.png" alt="" width="34" height="34">
+          <span class="t">Crank the Code</span>
+        </div>
+        <div class="d">The Decision Architecture thesis and writing</div>
+      </a>
+      <a class="card" href="https://github.com/oernster">
+        <div class="hd">
+          <img class="ic" src="assets/github.svg" alt="" width="34" height="34">
+          <span class="t">GitHub</span>
+        </div>
+        <div class="d">github.com/oernster, the full collection of projects</div>
+      </a>
+    </div>
 
     <h2 class="section">Selected Work</h2>
 
@@ -132,20 +150,6 @@
           <span class="t">Audio Deck</span>
         </div>
         <div class="d">One-click Windows audio device switching with saved profiles</div>
-      </a>
-      <a class="card newrow" href="https://www.crankthecode.com">
-        <div class="hd">
-          <img class="ic" src="assets/crankthecode.png" alt="" width="34" height="34">
-          <span class="t">Crank the Code</span>
-        </div>
-        <div class="d">The Decision Architecture thesis and writing</div>
-      </a>
-      <a class="card" href="https://github.com/oernster">
-        <div class="hd">
-          <img class="ic" src="assets/github.svg" alt="" width="34" height="34">
-          <span class="t">GitHub</span>
-        </div>
-        <div class="d">github.com/oernster, the full collection of projects</div>
       </a>
     </div>
   </main>
