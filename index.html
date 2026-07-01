@@ -33,7 +33,9 @@
     h2.section { margin-top: 34px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
     .links { margin-top: 16px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; align-items: stretch; }
     .links .wide { grid-column: 1 / -1; }
-    @media (max-width: 560px) { .links { grid-template-columns: 1fr; } }
+    /* A lone trailing card centred across the full row at normal card width. */
+    .links .centered { grid-column: 1 / -1; justify-self: center; width: 100%; max-width: calc(50% - 7px); }
+    @media (max-width: 560px) { .links { grid-template-columns: 1fr; } .links .centered { max-width: none; } }
     a.card {
       display: block;
       text-decoration: none;
@@ -150,6 +152,13 @@
           <span class="t">E:D Colonisation Assistant</span>
         </div>
         <div class="d">Automatic colonisation and fleet carrier tracking from your journal</div>
+      </a>
+      <a class="card centered" href="https://oernster.github.io/snark-as-a-service/">
+        <div class="hd">
+          <img class="ic" src="assets/snarkapi.png" alt="" width="34" height="34">
+          <span class="t">SnarkAPI</span>
+        </div>
+        <div class="d">Condescension as a service: one endpoint, no feelings spared</div>
       </a>
     </div>
   </main>
