@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AxisDB">
+  <defs>
+    <linearGradient id="axisBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2530"/>
+      <stop offset="1" stop-color="#131a22"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="63" height="63" rx="14" fill="url(#axisBg)" stroke="#1f2933"/>
+  <!-- Coordinate guides from the plotted point to each axis -->
+  <g stroke="#5f93c9" stroke-width="1.6" stroke-dasharray="2.4 2.6" stroke-linecap="round">
+    <line x1="39" y1="25" x2="39" y2="45"/>
+    <line x1="39" y1="25" x2="20" y2="25"/>
+  </g>
+  <!-- Axes: X (right), Y (up), and a depth axis for the N-dimensional key -->
+  <g stroke="#6cb0ff" stroke-width="3" stroke-linecap="round" fill="#6cb0ff">
+    <line x1="20" y1="45" x2="51" y2="45"/>
+    <path d="M51 45 L45 41.6 L45 48.4 Z"/>
+    <line x1="20" y1="45" x2="20" y2="14"/>
+    <path d="M20 14 L16.6 20 L23.4 20 Z"/>
+    <line x1="20" y1="45" x2="33" y2="54"/>
+    <path d="M33 54 L26.8 53 L30 47.8 Z"/>
+  </g>
+  <!-- The addressed document at its coordinate -->
+  <circle cx="39" cy="25" r="4.4" fill="#cfe6ff" stroke="#6cb0ff" stroke-width="1.6"/>
+</svg>
