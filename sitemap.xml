@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- The single sitemap for this host: the hub pages plus every page of every
-     project site served under oernster.github.io. Project repos ship no
+     project site served under ernster.dev. Project repos ship no
      sitemap or robots.txt of their own; when a project site gains a page,
      add its URL here. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://oernster.github.io/</loc></url>
-  <url><loc>https://oernster.github.io/decision-architecture.html</loc></url>
-  <url><loc>https://oernster.github.io/applications.html</loc></url>
-  <url><loc>https://oernster.github.io/tooling.html</loc></url>
-  <url><loc>https://oernster.github.io/standards.html</loc></url>
-  <url><loc>https://oernster.github.io/gaming.html</loc></url>
-  <url><loc>https://oernster.github.io/printing.html</loc></url>
-  <url><loc>https://oernster.github.io/other.html</loc></url>
-  <url><loc>https://oernster.github.io/fulcrum/</loc></url>
-  <url><loc>https://oernster.github.io/latencylab/</loc></url>
-  <url><loc>https://oernster.github.io/ClearBudget/</loc></url>
-  <url><loc>https://oernster.github.io/Calendifier/</loc></url>
-  <url><loc>https://oernster.github.io/Trainer/</loc></url>
-  <url><loc>https://oernster.github.io/FancyClock/</loc></url>
-  <url><loc>https://oernster.github.io/AudioDeck/</loc></url>
-  <url><loc>https://oernster.github.io/locus/</loc></url>
-  <url><loc>https://oernster.github.io/CommandFixer/</loc></url>
-  <url><loc>https://oernster.github.io/coin-analysis/</loc></url>
-  <url><loc>https://oernster.github.io/meridian/</loc></url>
-  <url><loc>https://oernster.github.io/MMSP-Spec/</loc></url>
-  <url><loc>https://oernster.github.io/MMSP-Spec/spec.html</loc></url>
-  <url><loc>https://oernster.github.io/postal-gambit/</loc></url>
-  <url><loc>https://oernster.github.io/o7Debrief/</loc></url>
-  <url><loc>https://oernster.github.io/o7Debrief/example-report.html</loc></url>
-  <url><loc>https://oernster.github.io/EDColonisationAsst/</loc></url>
-  <url><loc>https://oernster.github.io/3D-printing-info/</loc></url>
-  <url><loc>https://oernster.github.io/3D-Printer-Launcher/</loc></url>
-  <url><loc>https://oernster.github.io/snark3Dprinter-discord-bot/</loc></url>
-  <url><loc>https://oernster.github.io/elevator/</loc></url>
-  <url><loc>https://oernster.github.io/snark-as-a-service/</loc></url>
+  <url><loc>https://ernster.dev/</loc></url>
+  <url><loc>https://ernster.dev/decision-architecture.html</loc></url>
+  <url><loc>https://ernster.dev/applications.html</loc></url>
+  <url><loc>https://ernster.dev/tooling.html</loc></url>
+  <url><loc>https://ernster.dev/standards.html</loc></url>
+  <url><loc>https://ernster.dev/gaming.html</loc></url>
+  <url><loc>https://ernster.dev/printing.html</loc></url>
+  <url><loc>https://ernster.dev/other.html</loc></url>
+  <url><loc>https://ernster.dev/fulcrum/</loc></url>
+  <url><loc>https://ernster.dev/latencylab/</loc></url>
+  <url><loc>https://ernster.dev/ClearBudget/</loc></url>
+  <url><loc>https://ernster.dev/Calendifier/</loc></url>
+  <url><loc>https://ernster.dev/Trainer/</loc></url>
+  <url><loc>https://ernster.dev/FancyClock/</loc></url>
+  <url><loc>https://ernster.dev/AudioDeck/</loc></url>
+  <url><loc>https://ernster.dev/locus/</loc></url>
+  <url><loc>https://ernster.dev/CommandFixer/</loc></url>
+  <url><loc>https://ernster.dev/coin-analysis/</loc></url>
+  <url><loc>https://ernster.dev/meridian/</loc></url>
+  <url><loc>https://ernster.dev/MMSP-Spec/</loc></url>
+  <url><loc>https://ernster.dev/MMSP-Spec/spec.html</loc></url>
+  <url><loc>https://ernster.dev/postal-gambit/</loc></url>
+  <url><loc>https://ernster.dev/o7Debrief/</loc></url>
+  <url><loc>https://ernster.dev/o7Debrief/example-report.html</loc></url>
+  <url><loc>https://ernster.dev/EDColonisationAsst/</loc></url>
+  <url><loc>https://ernster.dev/3D-printing-info/</loc></url>
+  <url><loc>https://ernster.dev/3D-Printer-Launcher/</loc></url>
+  <url><loc>https://ernster.dev/snark3Dprinter-discord-bot/</loc></url>
+  <url><loc>https://ernster.dev/elevator/</loc></url>
+  <url><loc>https://ernster.dev/snark-as-a-service/</loc></url>
 </urlset>

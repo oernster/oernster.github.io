@@ -1,6 +1,6 @@
-# robots.txt for oernster.github.io (host root: covers the hub and every
+# robots.txt for ernster.dev (host root: covers the hub and every
 # project site served under this host).
 User-agent: *
 Allow: /
 
-Sitemap: https://oernster.github.io/sitemap.xml
+Sitemap: https://ernster.dev/sitemap.xml
