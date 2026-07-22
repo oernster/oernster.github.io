@@ -1,6 +1,6 @@
 # ernster.dev
 
-The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to Oliver Ernster's public work, grouped by category (Decision Architecture, applications, libraries and tooling, protocol and standards, gaming, 3D printing and the long tail).
+The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to my (Oliver Ernster) public work, grouped by category (Decision Architecture, applications, libraries and tooling, protocol and standards, gaming, 3D printing and the long tail).
 
 ## Who this is for
 
@@ -21,16 +21,6 @@ This repository owns the host root, so it carries the crawler surface for every 
 - `robots.txt`: the single robots file for the host (crawlers read it only at the root).
 - `sitemap.xml`: the single sitemap listing the hub pages and every page of every project site on the host. Project repositories ship no sitemap or robots of their own; when a project site gains a page, its URL is added here.
 - Every page carries a canonical URL, Open Graph and Twitter card metadata; the home page carries Person and WebSite JSON-LD and the Google site verification tag.
-
-## Run locally
-
-Serve the directory with any static file server, for example:
-
-```
-python -m http.server 8141
-```
-
-Then open http://localhost:8141/.
 
 ## Licence
 
