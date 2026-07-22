@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hub pages plus every project site on this host that does not maintain
+     its own sitemap. Sites with their own sitemap (MMSP-Spec, ClearBudget,
+     EDColonisationAsst, FancyClock, o7Debrief) are referenced from
+     /robots.txt instead. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://oernster.github.io/</loc></url>
+  <url><loc>https://oernster.github.io/decision-architecture.html</loc></url>
+  <url><loc>https://oernster.github.io/applications.html</loc></url>
+  <url><loc>https://oernster.github.io/tooling.html</loc></url>
+  <url><loc>https://oernster.github.io/standards.html</loc></url>
+  <url><loc>https://oernster.github.io/gaming.html</loc></url>
+  <url><loc>https://oernster.github.io/printing.html</loc></url>
+  <url><loc>https://oernster.github.io/other.html</loc></url>
+  <url><loc>https://oernster.github.io/fulcrum/</loc></url>
+  <url><loc>https://oernster.github.io/latencylab/</loc></url>
+  <url><loc>https://oernster.github.io/ClearBudget/</loc></url>
+  <url><loc>https://oernster.github.io/Calendifier/</loc></url>
+  <url><loc>https://oernster.github.io/Trainer/</loc></url>
+  <url><loc>https://oernster.github.io/AudioDeck/</loc></url>
+  <url><loc>https://oernster.github.io/locus/</loc></url>
+  <url><loc>https://oernster.github.io/CommandFixer/</loc></url>
+  <url><loc>https://oernster.github.io/coin-analysis/</loc></url>
+  <url><loc>https://oernster.github.io/meridian/</loc></url>
+  <url><loc>https://oernster.github.io/postal-gambit/</loc></url>
+  <url><loc>https://oernster.github.io/3D-printing-info/</loc></url>
+  <url><loc>https://oernster.github.io/3D-Printer-Launcher/</loc></url>
+  <url><loc>https://oernster.github.io/snark3Dprinter-discord-bot/</loc></url>
+  <url><loc>https://oernster.github.io/elevator/</loc></url>
+</urlset>
