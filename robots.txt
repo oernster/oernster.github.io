@@ -4,8 +4,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://oernster.github.io/sitemap.xml
-Sitemap: https://oernster.github.io/MMSP-Spec/sitemap.xml
-Sitemap: https://oernster.github.io/ClearBudget/sitemap.xml
-Sitemap: https://oernster.github.io/EDColonisationAsst/sitemap.xml
-Sitemap: https://oernster.github.io/FancyClock/sitemap.xml
-Sitemap: https://oernster.github.io/o7Debrief/sitemap.xml

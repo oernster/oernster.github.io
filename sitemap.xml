@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Hub pages plus every project site on this host that does not maintain
-     its own sitemap. Sites with their own sitemap (MMSP-Spec, ClearBudget,
-     EDColonisationAsst, FancyClock, o7Debrief) are referenced from
-     /robots.txt instead. -->
+<!-- The single sitemap for this host: the hub pages plus every page of every
+     project site served under oernster.github.io. Project repos ship no
+     sitemap or robots.txt of their own; when a project site gains a page,
+     add its URL here. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://oernster.github.io/</loc></url>
   <url><loc>https://oernster.github.io/decision-architecture.html</loc></url>
@@ -17,12 +17,18 @@
   <url><loc>https://oernster.github.io/ClearBudget/</loc></url>
   <url><loc>https://oernster.github.io/Calendifier/</loc></url>
   <url><loc>https://oernster.github.io/Trainer/</loc></url>
+  <url><loc>https://oernster.github.io/FancyClock/</loc></url>
   <url><loc>https://oernster.github.io/AudioDeck/</loc></url>
   <url><loc>https://oernster.github.io/locus/</loc></url>
   <url><loc>https://oernster.github.io/CommandFixer/</loc></url>
   <url><loc>https://oernster.github.io/coin-analysis/</loc></url>
   <url><loc>https://oernster.github.io/meridian/</loc></url>
+  <url><loc>https://oernster.github.io/MMSP-Spec/</loc></url>
+  <url><loc>https://oernster.github.io/MMSP-Spec/spec.html</loc></url>
   <url><loc>https://oernster.github.io/postal-gambit/</loc></url>
+  <url><loc>https://oernster.github.io/o7Debrief/</loc></url>
+  <url><loc>https://oernster.github.io/o7Debrief/example-report.html</loc></url>
+  <url><loc>https://oernster.github.io/EDColonisationAsst/</loc></url>
   <url><loc>https://oernster.github.io/3D-printing-info/</loc></url>
   <url><loc>https://oernster.github.io/3D-Printer-Launcher/</loc></url>
   <url><loc>https://oernster.github.io/snark3Dprinter-discord-bot/</loc></url>
