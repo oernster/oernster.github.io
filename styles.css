@@ -142,6 +142,8 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
   transition: color .15s ease, border-color .15s ease;
 }
 .contact-row a:hover, .contact-row a:focus-visible { color: var(--text); border-color: var(--accent); outline: none; }
+.contact-row a.icon-pill { display: inline-flex; align-items: center; }
+.contact-row a.icon-pill svg { width: 16px; height: 16px; display: block; }
 
 /* Evidence band on the Decision Architecture page. Deliberately quieter than
    the card grid: text-forward, hairline separators instead of panels and only
