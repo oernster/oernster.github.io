@@ -130,6 +130,22 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .card .d code { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 13px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; color: #c9d4e0; }
 .card .count { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
 
+/* Evidence band on the Decision Architecture page. Deliberately quieter than
+   the card grid: text-forward, hairline separators instead of panels and only
+   the existing tokens. */
+.proof { margin-top: 34px; }
+.proof-lead { color: var(--muted); font-size: 15.5px; margin-top: 8px; max-width: 72ch; }
+.proof .stats { margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 14px; }
+@media (max-width: 860px) { .proof .stats { grid-template-columns: repeat(2, 1fr); } }
+.proof .stat { border-top: 1px solid var(--border); padding-top: 12px; }
+.proof .figure { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+@media (max-width: 420px) { .proof .figure { font-size: 17px; } }
+.proof .cap { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
+.proof-close { color: var(--muted); font-size: 14.5px; margin-top: 22px; max-width: 72ch; }
+.proof-cta { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 15px; font-weight: 600; }
+.proof-cta a { text-decoration: none; }
+.proof-cta a:hover, .proof-cta a:focus-visible { color: var(--accent); outline: none; }
+
 /* Footer. */
 footer { max-width: var(--maxw); margin: 0 auto; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
