@@ -68,12 +68,10 @@
       <nav class="nav" aria-label="Sections">
         <a href="index.html" aria-current="page">Home</a>
         <a href="decision-architecture.html">Decision Architecture</a>
-        <a href="applications.html">Applications</a>
         <a href="standards.html">Standards</a>
-        <a href="printing.html">3D Printing</a>
-        <a href="gaming.html">Gaming</a>
+        <a href="applications.html">Applications</a>
         <a href="tooling.html">Tooling</a>
-        <a href="other.html">Web APIs</a>
+        <a href="workshop.html">Workshop</a>
       </nav>
     </div>
   </header>
@@ -82,7 +80,7 @@
     <div class="pagehead">
       <h1>Oliver Ernster</h1>
       <p class="role">Principal Python engineer and software architect: APIs, integration and platform modernisation; 28 years at the seams of systems and author of the Decision Architecture series.</p>
-      <p class="lede">Entry point to my public work. Most of it is local-first, correctness-first and built to run on real machines rather than sit behind a login. Pick a category to see the projects within it.</p>
+      <p class="lede">Entry point to my public work. Most of it is local-first, correctness-first and built to run on real machines rather than sit behind a login. Three deep dives below carry the core of the argument; everything else is two clicks away.</p>
       <div class="contact-row">
         <a data-email-reveal href="https://www.crankthecode.com" aria-label="Work with me (opens mail client)">Work with me</a>
         <a class="icon-pill" href="https://www.linkedin.com/in/oliverernster" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
@@ -117,48 +115,84 @@
       </a>
     </div>
 
-    <h2 class="section">Explore by category</h2>
+    <h2 class="section">The work, in depth</h2>
+    <p class="section-note">Three projects, each answering the same four questions: what was hard, what was chosen, what that choice costs and what shows it worked.</p>
+
+    <section class="dive" aria-labelledby="dive-da">
+      <h3 id="dive-da">Decision Architecture</h3>
+      <p class="dive-intro">A four-book thesis on the structural design of decision-making, with two instruments that make it executable: Fulcrum and LatencyLab.</p>
+      <div class="dive-grid">
+        <div class="dive-part">
+          <h4>The hard problem</h4>
+          <p>Organisational theory has a recurring weakness: it cannot be run. Claims arrive in prose, illustrated by anecdote and defended by seniority, so debates about structure become narrative contests in which the most senior voice wins and a reorg gets tested on real people because there is nowhere else to test it first.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The decision</h4>
+          <p>Make the model executable rather than persuasive. Fulcrum models an organisation the way the books describe one (teams, domains, dependencies with propagation delays, authority placement, incentive skew) and scores its structural health deterministically from 0 to 100; LatencyLab, deterministic and seeded, prices the latency cost of a structure before it hardens. There is no randomness in scoring: two people with the same model get the same number. The rejected alternative was the usual one, a thesis that asks to be believed instead of one that asks to be rerun.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The trade-off accepted</h4>
+          <p>Determinism is bought with abstraction: the units are abstract and the numbers illustrate mechanism, so a score compares structures rather than calibrating to any real organisation's metrics. The model is also deliberately silent on substance. It says where decisions can live and how they interact, never what to decide; a perfectly structured organisation can still pursue the wrong product.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The evidence</h4>
+          <p>The numbers behave the way the books predict and anyone can rerun them: typical organisation archetypes collapse from 75.6 to 14.8 as they grow while well-designed ones degrade gently from 98.7 to 66.4; on the enterprise archetype a single approval-layer blunder (&minus;9.40) outweighs the best available repair (+6.85). The claims are falsifiable by design: model a realistic organisation in which adding an approval layer improves structural health and the framework is wrong in a way anyone can inspect.</p>
+        </div>
+      </div>
+      <p class="dive-link"><a href="decision-architecture.html">Fulcrum, LatencyLab, the website and the book series &rarr;</a></p>
+    </section>
+
+    <section class="dive" aria-labelledby="dive-standards">
+      <h3 id="dive-standards">Protocol &amp; standards</h3>
+      <p class="dive-intro">MMSP, a community specification for multimedia feed subscription, with Meridian as its reference implementation.</p>
+      <div class="dive-grid">
+        <div class="dive-part">
+          <h4>The hard problem</h4>
+          <p>RSS answered the early web's question: how do I follow a site's articles without visiting it? The current web poses a broader one. A publisher's output now spans video, audio, articles, releases and events across disconnected platforms; RSS 2.0 and Atom model one content form well, everything else arrives through namespace extensions, platform APIs or not at all, while every push-based alternative monetises attention.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The decision</h4>
+          <p>Specify a protocol, not a platform. MMSP is JSON-based, pull-only and defined as a semantic superset of RSS 2.0 and Atom, with twelve first-class item types and discovery from a bare domain; calm consumption is enforced at the wire level (no server push, a 300-second minimum poll interval) instead of being left as a cultural norm. The file-format-only path was rejected: JSON Feed had already proved the appetite for JSON-native syndication yet stops at the document; the hard part is the behaviour around the format: conditional GET, back-off, pagination and partial-feed tolerance.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The trade-off accepted</h4>
+          <p>Calm costs immediacy. A conformant client cannot deliver server push and cannot poll faster than every five minutes; both constraints are normative, so MMSP is structurally incapable of real-time delivery, on purpose. The status is stated just as plainly: an independent community specification that borrows IETF draft naming as a familiar convention, not an IETF work product.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The evidence</h4>
+          <p>A conformance suite targets every normative statement in the spec, with a 100% coverage target; formal JSON Schemas make a publisher's output mechanically verifiable. Meridian, the reference client, proves the normalisation rules against real RSS, Atom, podcast, YouTube and native MFEED feeds on Windows, macOS and Linux, with 100% branch coverage on every build. The spec keeps the client honest; the client keeps the spec real.</p>
+        </div>
+      </div>
+      <p class="dive-link"><a href="standards.html">The MMSP Specification and Meridian &rarr;</a></p>
+    </section>
+
+    <section class="dive" aria-labelledby="dive-apps">
+      <h3 id="dive-apps">Applications</h3>
+      <p class="dive-intro">Seven shipped desktop and web applications, led by PigeonPost (email, calendar and contacts) and ClearBudget (solvency forecasting).</p>
+      <div class="dive-grid">
+        <div class="dive-part">
+          <h4>The hard problem</h4>
+          <p>Desktop email settled into three unsatisfying shapes: webmail answers to an engagement model, Outlook wants a subscription and Thunderbird's priorities sit in someone else's queue. Budgeting software is almost universally retrospective; a monthly total can look safe while the month itself is structurally unsafe, with income landing late, bills clustering early and a payment that is affordable at month end impossible on the day it actually falls.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The decision</h4>
+          <p>Decline the cloud structurally rather than by policy. PigeonPost keeps mail with the provider: the client reads it, caches it locally for instant offline search and gets out of the way, with no PigeonPost account, no cloud relay and no telemetry in the path. ClearBudget asks the forward question (will the month survive?) and puts the projection logic in a pure domain no UI event or database write can reach into. The rejected alternative was a hosted service; the absence of a cloud in between is the point, not a gap to fill.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The trade-off accepted</h4>
+          <p>Local-first has admitted costs. PigeonPost's local cache is ordinary data on your own disk, not encrypted at rest; the site tells users to pair it with OS disk encryption rather than claiming protection the client does not provide. The fit is published just as honestly: not for webmail-only users and not for OAuth-only Google Workspace accounts, stated in the open so the wrong person is not misled.</p>
+        </div>
+        <div class="dive-part">
+          <h4>The evidence</h4>
+          <p>Both lead applications ship as installed software. PigeonPost builds for Windows, macOS (Apple Silicon) and Linux, each platform with its own installer, a 100% test-coverage gate on the core logic and clean-architecture boundaries enforced by structural tests. ClearBudget is a finished cross-platform tool with multiple users behind bcrypt sign-in, 25 display currencies and validated import and export; it is dogfood in the full sense, the application its author opens to decide whether the month holds together.</p>
+        </div>
+      </div>
+      <p class="dive-link"><a href="applications.html">All seven applications &rarr;</a></p>
+    </section>
+
+    <h2 class="section">Everything else</h2>
+    <p class="section-note">The rest of the catalogue, reachable in two clicks.</p>
     <div class="grid">
-      <a class="card" href="decision-architecture.html">
-        <span class="ic"><img src="assets/fulcrum.png" alt="" width="38" height="38"></span>
-        <span class="body">
-          <span class="t">Decision Architecture</span>
-          <span class="d">The thesis and the software that makes it executable.</span>
-          <span class="count">Fulcrum, LatencyLab, the website and the book series &middot; 4</span>
-        </span>
-      </a>
-      <a class="card" href="applications.html">
-        <span class="ic"><img src="assets/cat-applications.png" alt="" width="38" height="38"></span>
-        <span class="body">
-          <span class="t">Applications</span>
-          <span class="d">Shipped desktop and web apps, most for multiple operating systems.</span>
-          <span class="count">PigeonPost, NarrateX, ClearBudget and more &middot; 7</span>
-        </span>
-      </a>
-      <a class="card" href="standards.html">
-        <span class="ic"><img src="assets/cat-standards.png" alt="" width="38" height="38"></span>
-        <span class="body">
-          <span class="t">Protocol &amp; standards</span>
-          <span class="d">A draft specification and its reference implementation.</span>
-          <span class="count">MMSP, Meridian &middot; 2</span>
-        </span>
-      </a>
-      <a class="card" href="printing.html">
-        <span class="ic"><img src="assets/3d-printing-info.png" alt="" width="38" height="38"></span>
-        <span class="body">
-          <span class="t">3D printing</span>
-          <span class="d">An eight-year curated domain of guides, config and tooling.</span>
-          <span class="count">Info base, Launcher, Snark bot &middot; 3</span>
-        </span>
-      </a>
-      <a class="card" href="gaming.html">
-        <span class="ic emoji" aria-hidden="true">&#127918;</span>
-        <span class="body">
-          <span class="t">Gaming</span>
-          <span class="d">Games I keep coming back to, with the tools built around them.</span>
-          <span class="count">o7 Debrief, Colonisation Assistant, Postal Gambit &middot; 3</span>
-        </span>
-      </a>
       <a class="card" href="tooling.html">
         <span class="ic emoji" aria-hidden="true">&#128295;</span>
         <span class="body">
@@ -167,12 +201,12 @@
           <span class="count">AxisDB, Locus, CommandFixer, Coin Analysis &middot; 4</span>
         </span>
       </a>
-      <a class="card centered wide" href="other.html">
-        <span class="ic emoji" aria-hidden="true">&#127760;</span>
+      <a class="card" href="workshop.html">
+        <span class="ic emoji" aria-hidden="true">&#128736;</span>
         <span class="body">
-          <span class="t">Web APIs</span>
-          <span class="d">Web services and APIs.</span>
-          <span class="count">Elevator Control Panel, Snark as a Service &middot; 2</span>
+          <span class="t">Workshop</span>
+          <span class="d">Long-running side interests and the tools built around them.</span>
+          <span class="count">3D printing, Gaming, Web APIs &middot; 8</span>
         </span>
       </a>
     </div>
