@@ -161,17 +161,19 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .proof-cta a { text-decoration: none; }
 .proof-cta a:hover, .proof-cta a:focus-visible { color: var(--accent); outline: none; }
 
-/* Homepage deep dives. The same quiet, text-forward treatment as the evidence
-   band on the Decision Architecture page: hairline separators, existing tokens
-   only, no new palette. */
-.dive { margin-top: 26px; border-top: 1px solid var(--border); padding-top: 20px; }
-.dive h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
-.dive-intro { color: var(--muted); font-size: 15px; margin-top: 6px; max-width: 72ch; }
-.dive-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 24px; }
+/* Homepage deep dives. Panels in the established card treatment (same tokens,
+   same radius and border) with an icon-headed title row and four short,
+   scannable parts. */
+.dive { margin-top: 16px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; }
+.dive-head { display: flex; align-items: flex-start; gap: 14px; }
+.dive-head .ic { margin-top: 2px; }
+.dive-head h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.dive-intro { color: var(--muted); font-size: 14.5px; margin-top: 3px; }
+.dive-grid { margin-top: 14px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 22px; }
 @media (max-width: 720px) { .dive-grid { grid-template-columns: 1fr; } }
 .dive-part h4 { font-size: 12.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
-.dive-part p { font-size: 14.5px; margin-top: 6px; }
-.dive-link { margin-top: 16px; font-size: 15px; font-weight: 600; }
+.dive-part p { font-size: 14.5px; margin-top: 4px; }
+.dive-link { margin-top: 14px; font-size: 15px; font-weight: 600; }
 .dive-link a { text-decoration: none; }
 .dive-link a:hover, .dive-link a:focus-visible { color: var(--accent); outline: none; }
 
