@@ -170,8 +170,13 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .dive-head h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
 .dive-intro { color: var(--muted); font-size: 14.5px; margin-top: 3px; }
 /* Project names called out inside dive copy: lifted to full text colour so
-   they read at a glance even inside the muted subtitle. */
+   they read at a glance even inside the muted subtitle. Each is a link to its
+   project site; the accent arrives on hover or keyboard focus. */
 .dive-intro strong, .dive-part strong { color: var(--text); font-weight: 700; }
+.dive-intro a, .dive-part a { text-decoration: none; }
+.dive-intro a:hover strong, .dive-part a:hover strong,
+.dive-intro a:focus-visible strong, .dive-part a:focus-visible strong { color: var(--accent); }
+.dive-intro a:focus-visible, .dive-part a:focus-visible { outline: none; }
 .dive-grid { margin-top: 14px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 22px; }
 @media (max-width: 720px) { .dive-grid { grid-template-columns: 1fr; } }
 .dive-part h4 { font-size: 12.5px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
