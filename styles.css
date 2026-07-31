@@ -164,7 +164,7 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 /* Homepage deep dives. Panels in the established card treatment (same tokens,
    same radius and border) with an icon-headed title row and four short,
    scannable parts. */
-.dive { margin-top: 16px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; }
+.dive { position: relative; margin-top: 16px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; transition: border-color .15s ease; }
 .dive-head { display: flex; align-items: flex-start; gap: 14px; }
 .dive-head .ic { margin-top: 2px; }
 .dive-head h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
@@ -173,7 +173,7 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
    they read at a glance even inside the muted subtitle. Each is a link to its
    project site; the accent arrives on hover or keyboard focus. */
 .dive-intro strong, .dive-part strong { color: var(--text); font-weight: 700; }
-.dive-intro a, .dive-part a { text-decoration: none; }
+.dive-intro a, .dive-part a { position: relative; z-index: 1; text-decoration: none; }
 .dive-intro a:hover strong, .dive-part a:hover strong,
 .dive-intro a:focus-visible strong, .dive-part a:focus-visible strong { color: var(--accent); }
 .dive-intro a:focus-visible, .dive-part a:focus-visible { outline: none; }
@@ -184,6 +184,15 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .dive-link { margin-top: 14px; font-size: 15px; font-weight: 600; }
 .dive-link a { text-decoration: none; }
 .dive-link a:hover, .dive-link a:focus-visible { color: var(--accent); outline: none; }
+/* Stretch the arrow link over the whole panel so a dive behaves like the
+   cards: click anywhere to open its section page. The inline project links
+   above sit at z-index 1, so they stay independently clickable on top. */
+.dive-link a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+/* Panel-wide hover affordance in the card treatment. Suppressed while an
+   inline project link is hovered, so the border only promises the panel's
+   own destination. */
+.dive:hover:not(:has(.dive-intro a:hover, .dive-part a:hover)) { border-color: var(--accent); }
+.dive:has(.dive-link a:focus-visible) { border-color: var(--accent); }
 
 /* Visible placeholder for any deep-dive claim that cannot be sourced from
    existing copy. Loud on purpose: it must never survive to a release. */
