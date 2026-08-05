@@ -153,7 +153,9 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .proof .stats { margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 14px; }
 @media (max-width: 860px) { .proof .stats { grid-template-columns: repeat(2, 1fr); } }
 .proof .stat { border-top: 1px solid var(--border); padding-top: 12px; }
-.proof .figure { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
+/* The figure line carries a finding rather than a number, so it wraps: the
+   numbers themselves live on Fulcrum's pages and are not restated here. */
+.proof .figure { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
 @media (max-width: 420px) { .proof .figure { font-size: 17px; } }
 .proof .cap { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
 .proof-close { color: var(--muted); font-size: 14.5px; margin-top: 22px; max-width: 72ch; }
