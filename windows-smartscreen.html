@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Windows SmartScreen warning &middot; Oliver Ernster</title>
+  <meta name="description" content="Why Windows shows a SmartScreen warning for these installers, and how to proceed safely.">
+  <link rel="canonical" href="https://ernster.dev/windows-smartscreen.html">
+  <meta name="theme-color" content="#0b0f14">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oliver Ernster">
+  <meta property="og:url" content="https://ernster.dev/windows-smartscreen.html">
+  <meta property="og:title" content="The Windows SmartScreen warning">
+  <meta property="og:description" content="Why Windows shows a SmartScreen warning for these installers, and how to proceed safely.">
+  <meta property="og:locale" content="en_GB">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="./">ernster.dev</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="./">Home</a>
+        <a href="decision-architecture.html">Decision Architecture</a>
+        <a href="standards.html">Standards</a>
+        <a href="applications.html">Applications</a>
+        <a href="tooling.html">Tooling</a>
+        <a href="workshop.html">Workshop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="pagehead">
+      <h1>About the Windows SmartScreen warning</h1>
+    </div>
+
+    <div class="prose">
+      <p>
+        The first time you run one of my Windows installers, Windows may show
+        a blue "Windows protected your PC" dialog. This is Microsoft Defender
+        SmartScreen. It appears for any program that is not signed with a paid
+        code-signing certificate and has not yet built up a large download
+        history, not because anything harmful was detected.
+      </p>
+
+      <p>
+        My installers are unsigned; this is a deliberate choice.
+        Certificates cost a meaningful annual fee; SmartScreen's reputation
+        system only clears once an installer has accumulated tens of thousands
+        of downloads, a bar independent software rarely meets, so the warning
+        would likely persist even after paying. I would rather keep the
+        software free, open and self-funded.
+      </p>
+
+      <h2 class="section">To proceed</h2>
+      <p>
+        Click <strong>More info</strong>, then <strong>Run anyway</strong>.
+      </p>
+
+      <h2 class="section">To verify what you're running</h2>
+      <p>
+        Every installer is published through GitHub Releases and linked
+        directly from its project page on this site. Download only from this
+        site or from the linked GitHub release page, never from a third-party
+        download site. Where a project is open source, the installer is built
+        from the repository you can read.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="row">
+      <a href="https://ernster.dev">Profile hub</a>
+      <a href="https://www.crankthecode.com">crankthecode.com</a>
+      <a href="https://github.com/oernster">github.com/oernster</a>
+      <a href="https://www.linkedin.com/in/oliverernster" target="_blank" rel="noopener">LinkedIn</a>
+      <a data-email-reveal href="https://www.crankthecode.com" aria-label="Work with me (opens mail client)">Work with me</a>
+    </div>
+  </footer>
+  <script src="contact.js" defer></script>
+</body>
+</html>

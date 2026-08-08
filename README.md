@@ -12,7 +12,7 @@ Anyone arriving from GitHub, a CV or a search result who wants the full catalogu
 
 - Plain hand-written HTML and CSS. No framework, no build step, no site generator (`.nojekyll`).
 - One page per category plus the home page, sharing a single stylesheet.
-- Served by GitHub Pages from this repository's root at the custom domain `ernster.dev` (the `CNAME` file). The old `oernster.github.io` URLs 301-redirect here, project sites included.
+- Served by GitHub Pages from this repository's root at the custom domain `ernster.dev` (the `CNAME` file). The old GitHub Pages default URLs 301-redirect here, project sites included.
 
 ## SEO infrastructure
 

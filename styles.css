@@ -1,4 +1,4 @@
-/* Shared styles for the oernster.github.io profile hub.
+/* Shared styles for the ernster.dev profile hub.
    Hand-built, no build step. Dark theme, card grid, sticky top nav. */
 
 :root {
@@ -75,6 +75,13 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 .pagehead { margin-bottom: 8px; }
 .pagehead h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
 .pagehead .role, .pagehead .lede { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
+/* Standalone pull-line between the descriptor and the lede. */
+.pagehead .pull { color: var(--text); margin-top: 10px; font-size: 17px; font-weight: 650; letter-spacing: -0.005em; }
+
+/* Long-form prose pages (e.g. the SmartScreen explainer). */
+.prose { max-width: 720px; }
+.prose p { margin-top: 14px; font-size: 15.5px; }
+.prose h2.section { margin-top: 28px; }
 
 h2.section { margin-top: 34px; margin-bottom: 2px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
 .section-note { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
