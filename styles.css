@@ -137,6 +137,10 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .card .d code { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 13px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; color: #c9d4e0; }
 .card .count { color: var(--muted); font-size: 13.5px; margin-top: 6px; }
 
+/* Platform pill on the Applications page: one statement of OS coverage
+   instead of five per-card lists. Static text, so no hover state. */
+.os-pill { display: inline-block; margin-top: 12px; color: var(--muted); font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); }
+
 /* Quiet contact actions in the hero: ghost pills that defer to the cards. */
 .contact-row { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
 .contact-row a {
