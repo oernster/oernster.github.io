@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- The single sitemap for this host: the hub pages plus every page of every
-     project site served under ernster.dev. Project repos ship no
+     project site served under ernster.dev. Those project repos ship no
      sitemap or robots.txt of their own; when a project site gains a page,
-     add its URL here. -->
+     add its URL here. A project on its OWN domain (ClearBudget, PigeonPost,
+     NarrateX) is a different host, so it owns its own robots.txt and sitemap
+     and none of its URLs belong in this file. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ernster.dev/</loc></url>
   <url><loc>https://ernster.dev/decision-architecture.html</loc></url>
