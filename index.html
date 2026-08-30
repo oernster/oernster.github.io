@@ -68,7 +68,6 @@
       <nav class="nav" aria-label="Sections">
         <a href="./" aria-current="page">Home</a>
         <a href="decision-architecture.html">Decision Architecture</a>
-        <a href="standards.html">Standards</a>
         <a href="applications.html">Applications</a>
         <a href="tooling.html">Tooling</a>
         <a href="workshop.html">Workshop</a>
@@ -81,7 +80,7 @@
       <h1>Oliver Ernster</h1>
       <p class="role">Principal Python engineer and software architect: APIs, integration and platform modernisation; 28 years at the seams of systems and author of the Decision Architecture series.</p>
       <p class="pull">I don't just write about architecture. I ship it.</p>
-      <p class="lede">Entry point to my public work. Most of it is local-first, correctness-first and built to run on real machines rather than sit behind a login. Three deep dives below carry the core of the argument; everything else is two clicks away.</p>
+      <p class="lede">Entry point to my public work. Most of it is local-first, correctness-first and built to run on real machines rather than sit behind a login. Two deep dives below carry the core of the argument; everything else is two clicks away.</p>
       <div class="contact-row">
         <a data-email-reveal href="https://www.crankthecode.com" aria-label="Work with me (opens mail client)">Work with me</a>
         <a class="icon-pill" href="https://www.linkedin.com/in/oliverernster" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
@@ -117,7 +116,7 @@
     </div>
 
     <h2 class="section">The work, in depth</h2>
-    <p class="section-note">Three projects, four questions each: what was hard, what was chosen, what it costs and what proved it.</p>
+    <p class="section-note">Two areas of work, four questions each: what was hard, what was chosen, what it costs and what proved it.</p>
 
     <section class="dive" aria-labelledby="dive-da">
       <div class="dive-head">
@@ -148,62 +147,33 @@
       <p class="dive-link"><a href="decision-architecture.html">Fulcrum, LatencyLab, the website and the book series &rarr;</a></p>
     </section>
 
-    <section class="dive" aria-labelledby="dive-standards">
-      <div class="dive-head">
-        <span class="ic"><img src="assets/cat-standards.png" alt="" width="38" height="38"></span>
-        <div>
-          <h3 id="dive-standards">Protocol &amp; standards</h3>
-          <p class="dive-intro">The <a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a> specification and <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a>, its reference implementation.</p>
-        </div>
-      </div>
-      <div class="dive-grid">
-        <div class="dive-part">
-          <h4>The hard problem</h4>
-          <p>Publishers now ship video, audio, articles and releases; RSS models one form well and push alternatives monetise attention.</p>
-        </div>
-        <div class="dive-part">
-          <h4>The decision</h4>
-          <p>A protocol, not a platform: JSON, pull-only, a semantic superset of RSS 2.0 and Atom, calm enforced at the wire level.</p>
-        </div>
-        <div class="dive-part">
-          <h4>The trade-off accepted</h4>
-          <p>No push and a 300-second poll floor: real-time delivery is impossible, on purpose. A community spec, not an IETF work product.</p>
-        </div>
-        <div class="dive-part">
-          <h4>The evidence</h4>
-          <p>A conformance suite covers every normative statement; <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> proves the rules against real feeds with 100% branch coverage.</p>
-        </div>
-      </div>
-      <p class="dive-link"><a href="standards.html">The MMSP Specification and Meridian &rarr;</a></p>
-    </section>
-
     <section class="dive" aria-labelledby="dive-apps">
       <div class="dive-head">
         <span class="ic"><img src="assets/cat-applications.png" alt="" width="38" height="38"></span>
         <div>
           <h3 id="dive-apps">Applications</h3>
-          <p class="dive-intro">Shipped applications, led by <a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> (email, calendar, contacts) and <a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> (solvency forecasting).</p>
+          <p class="dive-intro">Shipped applications, led by <a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> (email, calendar, contacts) and <a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> (solvency forecasting), with <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> reading feeds over <a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a>, the specification written to carry them.</p>
         </div>
       </div>
       <div class="dive-grid">
         <div class="dive-part">
           <h4>The hard problem</h4>
-          <p>Webmail wants engagement, Outlook wants a subscription and Thunderbird's priorities sit in someone else's queue; in budgeting, a monthly total can look safe while the month itself is structurally unsafe.</p>
+          <p>Webmail wants engagement, Outlook wants a subscription and the successors to RSS monetise attention. In budgeting, a monthly total can look safe while the month itself is structurally unsafe.</p>
         </div>
         <div class="dive-part">
           <h4>The decision</h4>
-          <p>Local-first, structurally: <a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> keeps mail with your provider (no account, no relay, no telemetry); <a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> projects the month day by day instead of reporting where the money went.</p>
+          <p>Local-first, structurally. <a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> keeps mail with your provider (no account, no relay, no telemetry); <a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> projects the month day by day; <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> reads a pull-only protocol with calm written into the wire.</p>
         </div>
         <div class="dive-part">
           <h4>The trade-off accepted</h4>
-          <p>The local cache is not encrypted at rest; the site says so and points to OS disk encryption. Openly not for webmail-only users.</p>
+          <p>The local cache is not encrypted at rest; the site says so and points to OS disk encryption. <a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a> holds a 300-second poll floor, so real-time delivery is impossible on purpose.</p>
         </div>
         <div class="dive-part">
           <h4>The evidence</h4>
-          <p>Installers for Windows, macOS and Linux behind a 100% coverage gate on the core logic. Both are the author's own daily tools.</p>
+          <p>Installers for Windows, macOS and Linux behind a 100% coverage gate on the core logic. A conformance suite covers every normative statement in the spec. Every one of them is a tool I use daily.</p>
         </div>
       </div>
-      <p class="dive-link"><a href="applications.html">All applications &rarr;</a></p>
+      <p class="dive-link"><a href="applications.html">All applications and the MMSP specification &rarr;</a></p>
     </section>
 
     <h2 class="section">Everything else</h2>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Applications &middot; Oliver Ernster</title>
-  <meta name="description" content="Shipped desktop and web applications, every one packaged for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock and AudioDeck.">
+  <meta name="description" content="Shipped desktop and web applications for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock, AudioDeck and Meridian, plus the MMSP specification Meridian implements.">
   <link rel="canonical" href="https://ernster.dev/applications.html">
   <meta name="theme-color" content="#0b0f14">
   <meta name="color-scheme" content="dark">
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="Oliver Ernster">
   <meta property="og:url" content="https://ernster.dev/applications.html">
   <meta property="og:title" content="Applications &middot; Oliver Ernster">
-  <meta property="og:description" content="Shipped desktop and web applications, every one packaged for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock and AudioDeck.">
+  <meta property="og:description" content="Shipped desktop and web applications for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock, AudioDeck and Meridian, plus the MMSP specification Meridian implements.">
   <meta property="og:image" content="https://ernster.dev/assets/og-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
@@ -23,7 +23,7 @@
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Applications &middot; Oliver Ernster">
-  <meta name="twitter:description" content="Shipped desktop and web applications, every one packaged for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock and AudioDeck.">
+  <meta name="twitter:description" content="Shipped desktop and web applications for Windows, macOS and Linux: PigeonPost, NarrateX, ClearBudget, FancyClock, AudioDeck and Meridian, plus the MMSP specification Meridian implements.">
   <meta name="twitter:image" content="https://ernster.dev/assets/og-card.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,7 +34,6 @@
       <nav class="nav" aria-label="Sections">
         <a href="./">Home</a>
         <a href="decision-architecture.html">Decision Architecture</a>
-        <a href="standards.html">Standards</a>
         <a href="applications.html" aria-current="page">Applications</a>
         <a href="tooling.html">Tooling</a>
         <a href="workshop.html">Workshop</a>
@@ -45,7 +44,7 @@
   <main>
     <div class="pagehead">
       <h1>Applications</h1>
-      <p class="lede">Shipped desktop and web applications, every one cross-platform.</p>
+      <p class="lede">Shipped desktop and web applications, every one cross-platform, plus the open specification one of them implements.</p>
       <span class="os-pill">Windows &middot; macOS &middot; Linux</span>
     </div>
 
@@ -83,6 +82,25 @@
         <span class="body">
           <span class="t">AudioDeck</span>
           <span class="d">Audio-device profile switching, with Stream Deck integration on Windows.</span>
+        </span>
+      </a>
+      <a class="card" href="https://ernster.dev/meridian/">
+        <span class="ic"><img src="assets/meridian.png" alt="" width="38" height="38"></span>
+        <span class="body">
+          <span class="t">Meridian</span>
+          <span class="d">A local-first reader for MMSP, RSS, Atom, podcasts and YouTube. It fetches on a schedule you set; nothing pushes at you.</span>
+        </span>
+      </a>
+    </div>
+
+    <h2 class="section">The specification behind Meridian</h2>
+    <p class="section-note">A protocol is not an application, so it sits on its own. Meridian above is its reference implementation.</p>
+    <div class="grid">
+      <a class="card wide" href="https://ernster.dev/MMSP-Spec/">
+        <span class="ic"><img src="assets/mmsp.png" alt="" width="38" height="38"></span>
+        <span class="body">
+          <span class="t">MMSP Specification</span>
+          <span class="d">MultiMedia Subscription Protocol: a community specification for feeds that carry video, audio, articles, images, releases and events in one JSON format, defined as a semantic superset of RSS 2.0 and Atom. Pull-only with a 300-second poll floor, so calm consumption is a property of the wire rather than a setting. Ships normative JSON Schemas and a conformance suite that mirrors the draft section by section.</span>
         </span>
       </a>
     </div>
