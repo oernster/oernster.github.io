@@ -69,6 +69,17 @@ a { color: inherit; }
 .nav a:hover, .nav a:focus-visible { color: var(--text); border-color: var(--border); outline: none; }
 .nav a[aria-current="page"] { color: var(--text); background: var(--panel); border-color: var(--border); }
 
+/* Utility links at the end of the nav: the CV, the thesis site and the source.
+   These are destinations rather than sections of this site, so they sit after a
+   hairline divider and carry their own mark instead of a category label. They
+   replace the "Start here" card block that used to open the home page. */
+.nav .sep { width: 1px; align-self: stretch; margin: 2px 4px; background: var(--border); }
+.nav a.util { display: inline-flex; align-items: center; gap: 10px; }
+.nav a.util img { width: 16px; height: 16px; object-fit: contain; border-radius: 4px; flex: 0 0 auto; }
+/* The divider only reads as a divider on one line; once the nav wraps it lands
+   mid-row and becomes noise, so it goes. */
+@media (max-width: 700px) { .nav .sep { display: none; } }
+
 /* Page shell. */
 main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 
@@ -77,6 +88,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 .pagehead .role, .pagehead .lede { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
 /* Standalone pull-line between the descriptor and the lede. */
 .pagehead .pull { color: var(--text); margin-top: 10px; font-size: 17px; font-weight: 650; letter-spacing: -0.005em; }
+.pagehead .seeking { color: var(--muted); margin-top: 10px; font-size: 15px; }
+.pagehead .seeking strong { color: var(--text); font-weight: 650; }
 
 /* Long-form prose pages (e.g. the SmartScreen explainer). */
 .prose { max-width: 720px; }
