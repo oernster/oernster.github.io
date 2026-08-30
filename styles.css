@@ -60,7 +60,7 @@ a { color: inherit; }
   text-decoration: none;
   color: var(--muted);
   font-size: 14px;
-  padding: 6px 10px;
+  padding: 6px 8px;
   border-radius: 999px;
   border: 1px solid transparent;
   transition: color .15s ease, border-color .15s ease, background .15s ease;
@@ -76,6 +76,8 @@ a { color: inherit; }
 .nav .sep { width: 1px; align-self: stretch; margin: 2px 4px; background: var(--border); }
 .nav a.util { display: inline-flex; align-items: center; gap: 10px; }
 .nav a.util img { width: 16px; height: 16px; object-fit: contain; border-radius: 4px; flex: 0 0 auto; }
+.nav a.util.icon-only { gap: 0; }
+.nav a.util.icon-only svg { width: 16px; height: 16px; display: block; }
 /* The divider only reads as a divider on one line; once the nav wraps it lands
    mid-row and becomes noise, so it goes. */
 @media (max-width: 700px) { .nav .sep { display: none; } }
@@ -87,9 +89,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 .pagehead h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
 .pagehead .role, .pagehead .lede { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
 /* Standalone pull-line between the descriptor and the lede. */
-.pagehead .pull { color: var(--text); margin-top: 10px; font-size: 17px; font-weight: 650; letter-spacing: -0.005em; }
-.pagehead .seeking { color: var(--muted); margin-top: 10px; font-size: 15px; }
-.pagehead .seeking strong { color: var(--text); font-weight: 650; }
+.pagehead .pull { color: var(--accent); font-style: italic; margin-top: 10px; font-size: 17px; font-weight: 650; letter-spacing: -0.005em; }
 
 /* Long-form prose pages (e.g. the SmartScreen explainer). */
 .prose { max-width: 720px; }
@@ -153,21 +153,6 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 /* Platform pill on the Applications page: one statement of OS coverage
    instead of five per-card lists. Static text, so no hover state. */
 .os-pill { display: inline-block; margin-top: 12px; color: var(--muted); font-size: 14px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); }
-
-/* Quiet contact actions in the hero: ghost pills that defer to the cards. */
-.contact-row { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; }
-.contact-row a {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 14px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  transition: color .15s ease, border-color .15s ease;
-}
-.contact-row a:hover, .contact-row a:focus-visible { color: var(--text); border-color: var(--accent); outline: none; }
-.contact-row a.icon-pill { display: inline-flex; align-items: center; }
-.contact-row a.icon-pill svg { width: 16px; height: 16px; display: block; }
 
 /* Evidence band on the Decision Architecture page. Deliberately quieter than
    the card grid: text-forward, hairline separators instead of panels and only
