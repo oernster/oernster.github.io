@@ -228,6 +228,13 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 .support p a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
 .support p a:hover, .support p a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); outline: none; }
 
+/* The projects on the commercial licensing page: each project's own icon, the
+   same mark its Applications or Tooling card carries, beside its name and
+   licence. Drawn small so the list still reads as a list rather than a grid. */
+.projects { list-style: none; margin-top: 12px; display: grid; gap: 8px; }
+.projects li { display: flex; align-items: center; gap: 12px; font-size: 15.5px; }
+.projects img { width: 24px; height: 24px; object-fit: contain; border-radius: 6px; flex: 0 0 auto; }
+
 /* Footer. */
 footer { max-width: var(--maxw); margin: 0 auto; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
