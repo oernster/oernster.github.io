@@ -216,6 +216,18 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
   margin-top: 6px;
 }
 
+/* Quiet postscript at the foot of a section page: the donate mark beside one
+   muted line, under a hairline like the evidence band. The mark is sized in em
+   against that line's own type, at the 2.7em the project sites give theirs,
+   so the artwork stays readable without competing with the cards above. It is
+   a second route to the same address, so only the text link takes focus. */
+.support { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 14.5px; }
+.support-mark { flex: 0 0 auto; opacity: .85; transition: opacity .15s ease; }
+.support-mark:hover { opacity: 1; }
+.support-mark img { display: block; height: 2.7em; width: auto; }
+.support p a { color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+.support p a:hover, .support p a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); outline: none; }
+
 /* Footer. */
 footer { max-width: var(--maxw); margin: 0 auto; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
