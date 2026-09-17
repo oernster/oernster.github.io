@@ -1,6 +1,6 @@
 # ernster.dev
 
-The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to my (Oliver Ernster) public work. The home page leads with two deep dives (Decision Architecture, applications); the MMSP specification and Meridian sit on the Applications page alongside the shipped apps, libraries and tooling have their own page and the Workshop hub gathers the side interests (3D printing, gaming, web APIs).
+The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to my (Oliver Ernster) public work. The home page leads with two deep dives (Decision Architecture, applications); the MMSP specification and Meridian sit on the Applications page alongside the shipped apps, libraries and tooling have their own page and the Workshop hub gathers the side interests (3D printing, gaming).
 
 ## Who this is for
 
@@ -11,6 +11,7 @@ Anyone arriving from GitHub, a CV or a search result who wants the full catalogu
 ## What it is
 
 - Plain hand-written HTML and CSS. No framework, no build step, no site generator (`.nojekyll`).
+- One home for the shared chrome: `stamp_chrome.py` holds the top bar and footer and writes them into every root page, marking the current section. Edit the navigation there, never in a page, then run `python stamp_chrome.py`; `python stamp_chrome.py --check` changes nothing and exits 1 if any page has drifted.
 - One page per category plus the home page, sharing a single stylesheet.
 - Served by GitHub Pages from this repository's root at the custom domain `ernster.dev` (the `CNAME` file). The old GitHub Pages default URLs 301-redirect here, project sites included.
 
