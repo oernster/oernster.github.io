@@ -11,7 +11,7 @@
   --muted: #9da7b3;
   --accent: #2f81f7;
   --radius: 16px;
-  --maxw: 980px;
+  --maxw: 1200px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -109,6 +109,17 @@ h2.section { margin-top: 34px; margin-bottom: 2px; font-size: 20px; font-weight:
 }
 .grid .wide { grid-column: 1 / -1; }
 @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+
+/* A third column, for a page with enough cards to fill one. Two columns is the
+   default because most hub pages carry four cards, which fill two rows evenly;
+   a third column would strand one of them. Applications has ten, so it opts in
+   rather than every page being widened into a gap. A wide card takes two of the
+   three: stretched across all of them its text runs to a single line over a
+   metre of screen, which is what a card is meant to avoid. */
+@media (min-width: 1024px) {
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  .grid.three .wide { grid-column: span 2; }
+}
 
 a.card {
   display: flex;
