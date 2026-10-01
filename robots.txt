@@ -4,3 +4,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ernster.dev/sitemap.xml
+# 3D-printing-info's build generates its own sitemap from its pages.
+Sitemap: https://ernster.dev/3D-printing-info/sitemap.xml
