@@ -299,6 +299,22 @@ a.sign:hover .go, a.sign:focus-visible .go { background: var(--accent); }
 .projects li { display: flex; align-items: center; gap: 12px; font-size: 15.5px; }
 .projects img { width: 24px; height: 24px; object-fit: contain; border-radius: 6px; flex: 0 0 auto; }
 
+/* Principles page: one static panel per rule in the deep-dive treatment.
+   Nothing here opens another page, so there is no hover border promising a
+   destination; the project names carry the links, lifted as in the dives. */
+.principle { margin-top: 16px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; }
+.pagehead + .principle { margin-top: 28px; }
+.principle h2 { display: flex; align-items: baseline; gap: 12px; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.principle .num { color: var(--accent); font-variant-numeric: tabular-nums; }
+.principle .rule { color: var(--muted); font-size: 15px; margin-top: 4px; max-width: 72ch; }
+.principle .held { margin-top: 12px; padding-left: 20px; display: grid; gap: 8px; font-size: 14.5px; max-width: 90ch; }
+.principle .held strong { color: var(--text); font-weight: 700; }
+.principle .held a { text-decoration: none; }
+.principle .held a:hover strong, .principle .held a:focus-visible strong { color: var(--accent); }
+.principle .held a:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; border-radius: 4px; }
+.prose .gaps { margin-top: 10px; padding-left: 20px; display: grid; gap: 8px; font-size: 15.5px; }
+.section-note a { color: var(--text); }
+
 /* Footer. */
 footer { max-width: var(--maxw); margin: 0 auto; padding: 24px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }

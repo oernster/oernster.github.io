@@ -35,6 +35,7 @@ SECTIONS = (
     ("decision-architecture.html", "Decision Architecture"),
     ("tooling.html", "Tooling"),
     ("workshop.html", "Workshop"),
+    ("principles.html", "Principles"),
     ("commercial-licensing.html", "Licensing"),
 )
 

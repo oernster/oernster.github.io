@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Principles &middot; Oliver Ernster</title>
+  <meta name="description" content="The engineering rules the applications on this site share, each one shown where a test, a boundary or a stated limit holds it.">
+  <link rel="canonical" href="https://ernster.dev/principles.html">
+  <meta name="theme-color" content="#0b0f14">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oliver Ernster">
+  <meta property="og:url" content="https://ernster.dev/principles.html">
+  <meta property="og:title" content="Principles">
+  <meta property="og:description" content="The engineering rules the applications on this site share, each one shown where a test, a boundary or a stated limit holds it.">
+  <meta property="og:image" content="https://ernster.dev/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:image:alt" content="ernster.dev portfolio card with amber space station emblem">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Principles &middot; Oliver Ernster">
+  <meta name="twitter:description" content="The engineering rules the applications on this site share, each one shown where a test, a boundary or a stated limit holds it.">
+  <meta name="twitter:image" content="https://ernster.dev/assets/og-card.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="./">ernster.dev</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="./">Home</a>
+        <a href="applications.html">Applications</a>
+        <a href="decision-architecture.html">Decision Architecture</a>
+        <a href="tooling.html">Tooling</a>
+        <a href="workshop.html">Workshop</a>
+        <a href="principles.html" aria-current="page">Principles</a>
+        <a href="commercial-licensing.html">Licensing</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a class="util" href="assets/CV-OliverErnster.pdf" title="Two-page CV (PDF)"><img src="assets/download-arrow-76.png" alt="" width="16" height="16">CV</a>
+        <a class="util" href="https://www.crankthecode.com" title="Crank the Code, the Decision Architecture thesis in long form"><img src="assets/crankthecode.png" alt="" width="16" height="16">Crank the Code</a>
+        <a class="util" href="https://github.com/oernster" title="github.com/oernster, the full collection of source"><img src="assets/github.svg" alt="" width="16" height="16">GitHub</a>
+        <a class="util icon-only" href="https://www.linkedin.com/in/oliverernster" target="_blank" rel="noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="pagehead">
+      <h1>Principles</h1>
+      <p class="role">The same few rules recur across the applications on this site. They are not a house style; each one is written into the code that ships.</p>
+      <p class="pull">A promise the architecture can break is only a sentence.</p>
+      <p class="lede">Every example below is held by a test, a code boundary or a statement in the project's own documentation, read from the repository rather than from the marketing. Where the practice still falls short of the principle, the last section says so.</p>
+    </div>
+
+    <section class="principle" aria-labelledby="p-structural">
+      <h2 id="p-structural"><span class="num" aria-hidden="true">1</span>A claim is a structure, not a sentence</h2>
+      <p class="rule">"Read only" is not true because the README says it. A promise about what software will never do belongs in a test that fails the build the moment the promise is broken.</p>
+      <ul class="held">
+        <li><a href="https://ernster.dev/PlainSight/"><strong>PlainSight</strong></a> walks the syntax tree of every module. Three named modules may write a file; a fourth that tries fails the build.</li>
+        <li><a href="https://stellody.co.uk/"><strong>Stellody</strong></a> makes the methods that write music tags unreachable from every module that reads one, so the player cannot damage the library it plays.</li>
+        <li><a href="https://symdiary.com"><strong>SymDiary</strong></a> fails the build on any import of a network package; a second test holds the page to a content policy that forbids connections from the other side.</li>
+        <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> forbids every network library across the app and its setup program, bar one named module granted one import for the update check.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-network">
+      <h2 id="p-network"><span class="num" aria-hidden="true">2</span>Outbound traffic fits on a page</h2>
+      <p class="rule">If an application calls itself local-first, everything it sends off the machine should be listable: each host, each purpose, ideally each field.</p>
+      <ul class="held">
+        <li><a href="https://earthnow.world/"><strong>EarthNow</strong></a> builds its HTTP client with five named hosts and refuses every other, redirects included. The README lists all five.</li>
+        <li><a href="https://stellody.co.uk/"><strong>Stellody</strong></a> lets four modules reach the network. Tests pin every address asked and every field sent; another checks that nothing sent names the listener or the machine.</li>
+        <li><a href="https://timeribbon.world/"><strong>TimeRibbon</strong></a> lets one package import a network package. Its one request is the update check.</li>
+        <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> makes exactly one outbound call, disclosed in full; your own mail client carries the games.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-leaving">
+      <h2 id="p-leaving"><span class="num" aria-hidden="true">3</span>Leaving is always possible</h2>
+      <p class="rule">Standard formats, local files and data that stays with its provider. Nothing here should be harder to leave than it was to start.</p>
+      <ul class="held">
+        <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> leaves your mail on your provider's server. Calendars and contacts travel as ICS, vCard and CSV, each format with a round-trip test.</li>
+        <li><a href="https://symdiary.com"><strong>SymDiary</strong></a> exports and imports its record; a test reads back every export format version the app has ever written.</li>
+        <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> backs up everything to one file. A broken backup is refused and changes nothing.</li>
+        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> exports a plan as JSON that imports again; it can also export one as a single HTML page.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-failure">
+      <h2 id="p-failure"><span class="num" aria-hidden="true">4</span>Failure is visible; partial success is reported as partial</h2>
+      <p class="rule">Software that hides a failure moves the cost to the moment you discover it. Saying what did not happen is part of the job.</p>
+      <ul class="held">
+        <li><a href="https://ernster.dev/AudioDeck/"><strong>AudioDeck</strong></a> reports a profile switch as partial when some devices could not be set, in the window and from the command line.</li>
+        <li><a href="https://ernster.dev/ScreenState/"><strong>ScreenState</strong></a> reports what a restore could not do, naming any application it could not read.</li>
+        <li><a href="https://earthnow.world/"><strong>EarthNow</strong></a> keeps the other days drawn when one day's data fails to arrive; a status panel gives the reason for each failure.</li>
+        <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> reports a partly refused move as an error, with the count the server accepted rather than the count it asked for.</li>
+        <li><a href="https://stellody.co.uk/"><strong>Stellody</strong></a> reports an unanswered lookup as unanswered. A scan summary never reads as more complete than the scan was.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-agency">
+      <h2 id="p-agency"><span class="num" aria-hidden="true">5</span>Automation removes work, not agency</h2>
+      <p class="rule">The software does the counting and proposes; a person decides. Nothing destructive happens behind a default.</p>
+      <ul class="held">
+        <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> counts what a mail rule would move before it moves anything. Importing rules shows a plan that writes nothing.</li>
+        <li><a href="https://ernster.dev/ScreenState/"><strong>ScreenState</strong></a> saves nothing until you confirm. Apply never closes one of your windows, whatever the settings say.</li>
+        <li><a href="https://stellody.co.uk/"><strong>Stellody</strong></a> describes a damaged tag and never repairs one. The repair is yours, in a tagger you chose.</li>
+        <li><a href="https://narratex.co.uk"><strong>NarrateX</strong></a> defaults its remove-book confirmation to cancel; declining removes nothing.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-determinism">
+      <h2 id="p-determinism"><span class="num" aria-hidden="true">6</span>Same input, same answer</h2>
+      <p class="rule">A number someone will act on should come out the same the second time. Randomness is seeded, time is injected and the output is pinned.</p>
+      <ul class="held">
+        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> forbids its model layer from importing randomness or the clock; a structural test fails if it does. Same model, same score.</li>
+        <li><a href="https://ernster.dev/latencylab/"><strong>LatencyLab</strong></a> runs a hundred seeded simulations twice and requires them to match; a golden snapshot pins the exact output.</li>
+        <li><a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a> publishes its specification only when the conformance suite passes. The 300-second poll floor is a test; <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> raises any shorter interval to it.</li>
+      </ul>
+    </section>
+
+    <section class="principle" aria-labelledby="p-nonclaims">
+      <h2 id="p-nonclaims"><span class="num" aria-hidden="true">7</span>Say what it does not do</h2>
+      <p class="rule">The most useful line in a README is often the one a reader would otherwise have assumed.</p>
+      <ul class="held">
+        <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a>, <a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a>, <a href="https://symdiary.com"><strong>SymDiary</strong></a> and <a href="https://stellody.co.uk/"><strong>Stellody</strong></a> each state plainly that their local data is not encrypted at rest.</li>
+        <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> has no in-app sending and says it never will.</li>
+        <li><a href="https://earthnow.world/"><strong>EarthNow</strong></a>, <a href="https://ernster.dev/ScreenState/"><strong>ScreenState</strong></a>, <a href="https://timeribbon.world/"><strong>TimeRibbon</strong></a> and <a href="https://symdiary.com"><strong>SymDiary</strong></a> each carry a section headed "What it does not do".</li>
+      </ul>
+    </section>
+
+    <div class="prose">
+      <h2 class="section">Where the practice is behind the principle</h2>
+      <p>Measured against the repositories as they stand, three gaps remain.</p>
+      <ul class="gaps">
+        <li>The outbound list for PigeonPost, ClearBudget, Fulcrum and Meridian is documented rather than tested: a new outbound call would not fail their suites.</li>
+        <li>Meridian logs a feed it could not import rather than telling you, so a partial import can read as a whole one.</li>
+        <li>The coverage gates run on the build machine. Only the MMSP specification runs its suite in continuous integration.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="row">
+      <a href="./">Back to home</a>
+      <a href="https://www.crankthecode.com">crankthecode.com</a>
+      <a href="https://github.com/oernster">github.com/oernster</a>
+      <a href="https://www.linkedin.com/in/oliverernster" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
