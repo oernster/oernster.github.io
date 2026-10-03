@@ -98,6 +98,7 @@
         <li><a href="https://earthnow.world/"><strong>EarthNow</strong></a> keeps the other days drawn when one day's data fails to arrive; a status panel gives the reason for each failure.</li>
         <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> reports a partly refused move as an error, with the count the server accepted rather than the count it asked for.</li>
         <li><a href="https://stellody.co.uk/"><strong>Stellody</strong></a> reports an unanswered lookup as unanswered. A scan summary never reads as more complete than the scan was.</li>
+        <li><a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> ends every import with a report: what was added, what you already had and each feed it could not add, with the reason.</li>
       </ul>
     </section>
 
@@ -134,10 +135,9 @@
 
     <div class="prose">
       <h2 class="section">Where the practice is behind the principle</h2>
-      <p>Measured against the repositories as they stand, three gaps remain.</p>
+      <p>Measured against the repositories as they stand, two gaps remain.</p>
       <ul class="gaps">
         <li>The outbound list for PigeonPost, ClearBudget, Fulcrum and Meridian is documented rather than tested: a new outbound call would not fail their suites.</li>
-        <li>Meridian logs a feed it could not import rather than telling you, so a partial import can read as a whole one.</li>
         <li>The coverage gates run on the build machine. Only the MMSP specification runs its suite in continuous integration.</li>
       </ul>
     </div>
