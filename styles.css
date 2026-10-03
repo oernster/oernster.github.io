@@ -312,7 +312,6 @@ a.sign:hover .go, a.sign:focus-visible .go { background: var(--accent); }
 .principle .held a { text-decoration: none; }
 .principle .held a:hover strong, .principle .held a:focus-visible strong { color: var(--accent); }
 .principle .held a:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; border-radius: 4px; }
-.prose .gaps { margin-top: 10px; padding-left: 20px; display: grid; gap: 8px; font-size: 15.5px; }
 .section-note a { color: var(--text); }
 
 /* Footer. */
