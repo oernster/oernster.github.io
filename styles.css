@@ -267,6 +267,9 @@ a.sign:hover .go, a.sign:focus-visible .go { background: var(--accent); }
 .sign .t { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; }
 .sign .d { color: var(--muted); font-size: 14.5px; }
 .sign .go { margin-top: auto; align-self: flex-start; }
+/* A signpost that spans the whole row, for the one section the others rest on.
+   Five cards in a four-column grid would leave one stranded on its own row. */
+a.sign.wide { grid-column: 1 / -1; }
 
 /* Visible placeholder for any deep-dive claim that cannot be sourced from
    existing copy. Loud on purpose: it must never survive to a release. */
@@ -307,7 +310,7 @@ a.sign:hover .go, a.sign:focus-visible .go { background: var(--accent); }
 .principle h2 { display: flex; align-items: baseline; gap: 12px; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
 .principle .num { color: var(--accent); font-variant-numeric: tabular-nums; }
 .principle .rule { color: var(--muted); font-size: 15px; margin-top: 4px; max-width: 72ch; }
-.principle .held { margin-top: 12px; padding-left: 20px; display: grid; gap: 8px; font-size: 14.5px; max-width: 90ch; }
+.principle .held, .prose .held { margin-top: 12px; padding-left: 20px; display: grid; gap: 8px; font-size: 14.5px; max-width: 90ch; }
 .principle .held strong { color: var(--text); font-weight: 700; }
 .principle .held a { text-decoration: none; }
 .principle .held a:hover strong, .principle .held a:focus-visible strong { color: var(--accent); }

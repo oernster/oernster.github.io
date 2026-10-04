@@ -35,7 +35,7 @@ SECTIONS = (
     ("decision-architecture.html", "Decision Architecture"),
     ("tooling.html", "Tooling"),
     ("workshop.html", "Workshop"),
-    ("principles.html", "Principles"),
+    ("principles.html", "Engineering Principles"),
     ("commercial-licensing.html", "Licensing"),
 )
 
@@ -53,11 +53,6 @@ UTILITY_LINKS = (
     (
         '<a class="util" href="assets/CV-OliverErnster.pdf" title="Two-page CV (PDF)">'
         '<img src="assets/download-arrow-76.png" alt="" width="16" height="16">CV</a>'
-    ),
-    (
-        f'<a class="util" href="{CRANK_URL}" title="Crank the Code, the Decision '
-        'Architecture thesis in long form"><img src="assets/crankthecode.png" alt="" '
-        'width="16" height="16">Crank the Code</a>'
     ),
     (
         f'<a class="util" href="{GITHUB_URL}" title="github.com/oernster, the full '
