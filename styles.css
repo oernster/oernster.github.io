@@ -98,8 +98,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 .pagehead { margin-bottom: 8px; }
 .pagehead h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
 /* A section page's title carries its category icon, the same one its landing
-   page signpost shows. */
-.pagehead h1.titled { display: flex; align-items: center; gap: 12px; }
+   page signpost shows; a section heading pointing at another page can too. */
+.pagehead h1.titled, h2.section.titled { display: flex; align-items: center; gap: 12px; }
 /* A category icon leading a link inside running text, sized to the text. */
 .inline-ic { width: 1.15em; height: 1.15em; vertical-align: -0.22em; margin-right: 0.3em; }
 .pagehead .role, .pagehead .lede { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
