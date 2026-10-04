@@ -28,7 +28,7 @@ PROFILE_HUB_FOOTER_PAGES = frozenset({HOME_PAGE, "windows-smartscreen.html"})
 LINKEDIN_URL = "https://www.linkedin.com/in/oliverernster"
 CRANK_URL = "https://www.crankthecode.com"
 GITHUB_URL = "https://github.com/oernster"
-BRAND_ICON = '<img src="assets/ernster-home.png" alt="" width="22" height="22">'
+BRAND_ICON = '<img src="assets/ernster-home-76.png" alt="" width="22" height="22">'
 
 SECTIONS = (
     (HOME_HREF, "Home"),
