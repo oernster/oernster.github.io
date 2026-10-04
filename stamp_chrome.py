@@ -28,6 +28,7 @@ PROFILE_HUB_FOOTER_PAGES = frozenset({HOME_PAGE, "windows-smartscreen.html"})
 LINKEDIN_URL = "https://www.linkedin.com/in/oliverernster"
 CRANK_URL = "https://www.crankthecode.com"
 GITHUB_URL = "https://github.com/oernster"
+BRAND_ICON = '<img src="assets/ernster-home.png" alt="" width="22" height="22">'
 
 SECTIONS = (
     (HOME_HREF, "Home"),
@@ -80,7 +81,7 @@ def render_header(page: str) -> str:
     lines = [
         '<header class="topbar">',
         '    <div class="inner">',
-        f'      <a class="brand" href="{HOME_HREF}">ernster.dev</a>',
+        f'      <a class="brand" href="{HOME_HREF}">{BRAND_ICON}ernster.dev</a>',
         '      <nav class="nav" aria-label="Sections">',
     ]
     for href, label in SECTIONS:
