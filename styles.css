@@ -311,14 +311,13 @@ a.sign.wide { grid-column: 1 / -1; }
    72 to 90 characters, so a full-width panel left most of a wide screen empty.
    Columns rather than a grid, because the panels differ in length: a grid row
    stretched every panel to its longest (measured 1111px beside 552px). The
-   numbers carry the reading order down each column. Same breakpoints as the
-   landing page signposts. */
+   principles are unnumbered, so no reading order rides on the column flow.
+   Same breakpoints as the landing page signposts. */
 .principles { margin-top: 28px; column-count: 3; column-gap: 16px; }
 .principles .principle { margin: 0 0 16px; break-inside: avoid; }
 @media (max-width: 1000px) { .principles { column-count: 2; } }
 @media (max-width: 640px) { .principles { column-count: 1; } }
-.principle h2 { display: flex; align-items: baseline; gap: 12px; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
-.principle .num { color: var(--accent); font-variant-numeric: tabular-nums; }
+.principle h2 { color: var(--accent); font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
 .principle .rule { color: var(--muted); font-size: 15px; margin-top: 4px; max-width: 72ch; }
 .principle .held, .prose .held { margin-top: 12px; padding-left: 20px; display: grid; gap: 8px; font-size: 14.5px; max-width: 90ch; }
 .principle .held strong { color: var(--text); font-weight: 700; }
