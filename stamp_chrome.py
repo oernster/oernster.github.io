@@ -39,6 +39,11 @@ SECTIONS = (
     ("principles.html", "Engineering Principles"),
     ("commercial-licensing.html", "Licensing"),
 )
+# Sections whose nav link leads with their category icon.
+SECTION_ICONS = {
+    "commercial-licensing.html": "assets/ernster-commercial-licensing-76.png",
+}
+NAV_ICON_SIZE = 16
 
 LINKEDIN_ICON_PATH = (
     "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 "
@@ -86,7 +91,14 @@ def render_header(page: str) -> str:
     ]
     for href, label in SECTIONS:
         marker = ' aria-current="page"' if href == current else ""
-        lines.append(f'        <a href="{href}"{marker}>{label}</a>')
+        icon = SECTION_ICONS.get(href)
+        if icon is None:
+            lines.append(f'        <a href="{href}"{marker}>{label}</a>')
+            continue
+        lines.append(
+            f'        <a class="has-ic" href="{href}"{marker}><img src="{icon}" '
+            f'alt="" width="{NAV_ICON_SIZE}" height="{NAV_ICON_SIZE}">{label}</a>'
+        )
     lines.append('        <span class="sep" aria-hidden="true"></span>')
     lines.extend(f"        {link}" for link in UTILITY_LINKS)
     lines.extend(["      </nav>", "    </div>", "  </header>"])

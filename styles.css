@@ -84,8 +84,8 @@ a { color: inherit; }
    hairline divider and carry their own mark instead of a category label. They
    replace the "Start here" card block that used to open the home page. */
 .nav .sep { width: 1px; align-self: stretch; margin: 2px 4px; background: var(--border); }
-.nav a.util { display: inline-flex; align-items: center; gap: 10px; }
-.nav a.util img { width: 16px; height: 16px; object-fit: contain; border-radius: 4px; flex: 0 0 auto; }
+.nav a.util, .nav a.has-ic { display: inline-flex; align-items: center; gap: 10px; }
+.nav a.util img, .nav a.has-ic img { width: 16px; height: 16px; object-fit: contain; border-radius: 4px; flex: 0 0 auto; }
 .nav a.util.icon-only { gap: 0; }
 .nav a.util.icon-only svg { width: 16px; height: 16px; display: block; }
 /* The divider only reads as a divider on one line; once the nav wraps it lands
@@ -100,6 +100,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 36px 24px 64px; }
 /* A section page's title carries its category icon, the same one its landing
    page signpost shows. */
 .pagehead h1.titled { display: flex; align-items: center; gap: 12px; }
+/* A category icon leading a link inside running text, sized to the text. */
+.inline-ic { width: 1.15em; height: 1.15em; vertical-align: -0.22em; margin-right: 0.3em; }
 .pagehead .role, .pagehead .lede { color: var(--muted); margin-top: 8px; font-size: 15.5px; }
 /* Standalone pull-line between the descriptor and the lede. */
 .pagehead .pull { color: var(--accent); font-style: italic; margin-top: 10px; font-size: 17px; font-weight: 650; letter-spacing: -0.005em; }
