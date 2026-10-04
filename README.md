@@ -12,6 +12,7 @@ Anyone arriving from GitHub, a CV or a search result who wants the full catalogu
 
 - Plain hand-written HTML and CSS. No framework, no build step, no site generator (`.nojekyll`).
 - One home for the shared chrome: `stamp_chrome.py` holds the top bar and footer and writes them into every root page, marking the current section. Edit the navigation there, never in a page, then run `python stamp_chrome.py`; `python stamp_chrome.py --check` changes nothing and exits 1 if any page has drifted.
+- Small copies of the category icons: each master `assets/ernster-<name>.png` is large artwork, so the pages serve `assets/ernster-<name>-76.png`, written by `generate_icons.py` (it needs Pillow). After adding or replacing a master, run `python generate_icons.py`; `python generate_icons.py --check` changes nothing and exits 1 if a copy is missing or stale. The masters are only ever read.
 - One page per category plus the home page, sharing a single stylesheet.
 - Served by GitHub Pages from this repository's root at the custom domain `ernster.dev` (the `CNAME` file). The old GitHub Pages default URLs 301-redirect here, project sites included.
 
