@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why SnarkAPI exists: a joke, engineered properly</title>
+<meta name="description" content="Why SnarkAPI was built: it is a gag service that takes its own construction seriously. One honest quote list, a proper service layer and a FastAPI build, so even the sarcasm respects the dependency direction.">
+<meta name="author" content="Oliver Ernster">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080c1f">
+<link rel="canonical" href="https://www.snarkapi.com/about/why.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SnarkAPI">
+<meta property="og:title" content="Why SnarkAPI exists: a joke, engineered properly">
+<meta property="og:description" content="A gag service that takes its own construction seriously. One honest quote list, a proper service layer and a FastAPI build, so even the sarcasm respects the dependency direction.">
+<meta property="og:url" content="https://www.snarkapi.com/about/why.html">
+<meta property="og:image" content="https://www.snarkapi.com/about/assets/snarkapi.png">
+<meta property="og:image:alt" content="The SnarkAPI mascot: a smug face sticking its tongue out beside a censored curse">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why SnarkAPI exists: a joke, engineered properly">
+<meta name="twitter:description" content="A gag service that takes its own construction seriously. One honest quote list, a proper service layer and a FastAPI build.">
+<meta name="twitter:image" content="https://www.snarkapi.com/about/assets/snarkapi.png">
+<link rel="icon" type="image/png" href="assets/snarkapi.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="./">
+      <img src="assets/snarkapi.png" alt="SnarkAPI icon">SnarkAPI</a>
+    <nav class="nav-links">
+      <a href="./#what">What you get</a>
+      <a href="./#use">Use it</a>
+      <a href="why.html">Why</a>
+      <a href="https://www.snarkapi.com/">Live site</a>
+      <a href="https://github.com/oernster/snark-as-a-service">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="exists">
+    <div class="container prose">
+      <div class="eyebrow">The reasoning</div>
+      <h2 class="section-title">Why this exists</h2>
+      <p>Two honest reasons. The first is that I wanted to roast IT people in public. The second
+        is more useful: personality in software is the thing that always gets cut. A team means to
+        give an app a bit of tone, then the deadline arrives and the humour ends up as a handful of
+        hardcoded strings scattered through the codebase, never quite consistent and impossible to
+        reuse. SnarkAPI is that tone pulled out into one place you can call.</p>
+      <p>So it does exactly one thing: it hands out insults. The live site types them at you; a
+        single GET of the quote list hands over the whole supply as JSON. No key, no quota, no
+        onboarding call to discuss your needs. A bot, a build script or a bored developer can all
+        reach it the same way.</p>
+      <p>The joke is the surface; the point is underneath. SnarkAPI is a portfolio piece that
+        happens to be funny, built on the same clean-architecture discipline as the serious work:
+        a thin route over a separate service layer, so even the sarcasm respects the dependency
+        direction. It is proof that a gag can be engineered rather than thrown together, which is a
+        more convincing demonstration than a straight-faced example of the same shape.</p>
+      <p>What works now is snarkapi.com: a page rendered by FastAPI at build time and served as
+        static files, typing its verdict at you over a moody blue downpour. Open source under GPL-3.0, no feelings
+        spared and the drama is not a bug.</p>
+      <p>The discipline is the part that is not a joke. Coverage is gated at 100% with branch
+        coverage on and the gate sits in the project config, so it applies to a bare test run
+        rather than to whoever remembers the flags. The paths worth holding are the unhappy ones:
+        if the quote supply goes missing or turns up in the wrong shape, the build drops to a
+        built-in reserve and the page keeps typing the line it has, because a joke site showing
+        an error is worse than one repeating itself. Dependencies are pinned exactly so a redeploy cannot quietly
+        pull a breaking release; the homepage answers on one address only, so a search engine
+        sees a single page instead of two copies arguing over the same content.</p>
+      <div class="cta" style="justify-content:flex-start;margin-top:30px;">
+        <a class="btn btn-primary" href="https://www.snarkapi.com/">Insult me &rarr;</a>
+        <a class="btn btn-ghost" href="./">Back to overview</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>SnarkAPI</strong>: condescension as a service<br>
+      (c) Oliver Ernster · Built with FastAPI · GPL-3.0 ·
+      v<!--VERSION-->1.5.0<!--/VERSION-->
+    </div>
+    <div class="footer-links">
+      <a href="https://www.snarkapi.com/">Live site</a>
+      <a href="https://github.com/oernster/snark-as-a-service">GitHub</a>
+      <a href="https://www.crankthecode.com/">crankthecode.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Subtle canvas rain, echoing the live site and the landing page. Pauses when the tab is hidden.
+  (() => {
+    const canvas = document.getElementById('rain')
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+
+    const DROP_COUNT = 150
+    const MIN_LENGTH = 8
+    const MAX_LENGTH = 22
+    const MIN_SPEED = 4
+    const MAX_SPEED = 12
+    const SLANT = 1.3
+    const LINE_WIDTH = 1.1
+    const DROP_COLOR =
+      getComputedStyle(document.documentElement)
+        .getPropertyValue('--rain')
+        .trim() || 'rgba(174, 194, 255, 0.5)'
+
+    let width = 0
+    let height = 0
+    let drops = []
+    const rand = (min, max) => min + Math.random() * (max - min)
+    const makeDrop = () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      len: rand(MIN_LENGTH, MAX_LENGTH),
+      speed: rand(MIN_SPEED, MAX_SPEED),
+    })
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1
+      width = canvas.clientWidth
+      height = canvas.clientHeight
+      canvas.width = width * dpr
+      canvas.height = height * dpr
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      drops = Array.from({ length: DROP_COUNT }, makeDrop)
+    }
+
+    function frame() {
+      ctx.clearRect(0, 0, width, height)
+      ctx.strokeStyle = DROP_COLOR
+      ctx.lineWidth = LINE_WIDTH
+      ctx.lineCap = 'round'
+      for (const d of drops) {
+        ctx.beginPath()
+        ctx.moveTo(d.x, d.y)
+        ctx.lineTo(d.x + SLANT, d.y + d.len)
+        ctx.stroke()
+        d.x += SLANT * (d.speed / MAX_SPEED)
+        d.y += d.speed
+        if (d.y > height) { d.y = -d.len; d.x = Math.random() * width }
+      }
+      requestAnimationFrame(frame)
+    }
+
+    window.addEventListener('resize', resize)
+    resize()
+    requestAnimationFrame(frame)
+  })()
+</script>
+</body>
+</html>

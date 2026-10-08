@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnarkAPI: professional-grade condescension, on demand</title>
+<meta name="description" content="SnarkAPI is a tiny site that hands you a freshly-crafted sarcastic remark, then another. No auth, no feelings spared.">
+<meta name="keywords" content="SnarkAPI, sarcasm API, snark, FastAPI, developer humour, quotes API, Oliver Ernster">
+<meta name="author" content="Oliver Ernster">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#080c1f">
+<link rel="canonical" href="https://www.snarkapi.com/about/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SnarkAPI">
+<meta property="og:title" content="SnarkAPI: condescension as a service">
+<meta property="og:description" content="A tiny site that hands you a freshly-crafted sarcastic remark, then another. No auth, no feelings spared.">
+<meta property="og:url" content="https://www.snarkapi.com/about/">
+<meta property="og:image" content="https://www.snarkapi.com/about/assets/snarkapi.png">
+<meta property="og:image:alt" content="The SnarkAPI mascot: a smug face sticking its tongue out beside a censored curse">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SnarkAPI: condescension as a service">
+<meta name="twitter:description" content="A tiny site that hands you a freshly-crafted sarcastic remark, then another.">
+<meta name="twitter:image" content="https://www.snarkapi.com/about/assets/snarkapi.png">
+<link rel="icon" type="image/png" href="assets/snarkapi.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SnarkAPI","applicationCategory":"DeveloperApplication","operatingSystem":"Any","description":"A tiny site that types a freshly-crafted sarcastic remark at you, then another.","url":"https://www.snarkapi.com/","image":"https://www.snarkapi.com/about/assets/snarkapi.png","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"author":{"@type":"Person","name":"Oliver Ernster","url":"https://www.crankthecode.com/"},"license":"https://www.gnu.org/licenses/gpl-3.0.html"}</script>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/snarkapi.png" alt="SnarkAPI icon">SnarkAPI</a>
+    <nav class="nav-links">
+      <a href="#what">What you get</a>
+      <a href="#use">Use it</a>
+      <a href="why.html">Why</a>
+      <a href="https://www.snarkapi.com/">Live site</a>
+      <a href="https://github.com/oernster/snark-as-a-service">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <img class="logo" src="assets/snarkapi.png" alt="SnarkAPI icon">
+      <h1>SnarkAPI</h1>
+      <div class="tagline">Condescension as a Service</div>
+      <p class="lede">A tiny web service with exactly one job: hand you a
+        freshly-crafted, professionally-unhelpful remark whenever you ask.
+        No auth, no onboarding call, no feelings taken into account.</p>
+
+      <div class="demo" aria-label="Live sample of the snark">
+        <div class="bar">
+          <i></i><i></i><i></i>
+          <span class="addr">snarkapi.com/quotes.json</span>
+        </div>
+        <div class="screen" id="demo-screen" aria-live="polite"></div>
+      </div>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="https://www.snarkapi.com/">Insult me &rarr;</a>
+        <a class="btn btn-ghost" href="https://github.com/oernster/snark-as-a-service">View the source</a>
+      </div>
+      <div class="badges">
+        <span>Built with FastAPI</span>·<span>No feelings spared</span>
+        ·<span>GPL-3.0</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="alt">
+    <div class="container">
+      <div class="eyebrow">What you are signing up for</div>
+      <h2 class="section-title">Rude but well-engineered</h2>
+      <p class="section-sub">It is a joke service that takes its craft
+        seriously. A proper service layer on the inside, gentle character
+        assassination on the outside.</p>
+      <div class="features">
+        <div class="feature">
+          <div class="fnum">01</div>
+          <h3>One honest file</h3>
+          <p>A single GET returns every slight at once, as JSON. No keys, no
+            quotas, no "let's hop on a quick call to discuss your needs".</p>
+        </div>
+        <div class="feature">
+          <div class="fnum">02</div>
+          <h3>A deep well of slights</h3>
+          <p>The live site draws at random from several hundred hand-written
+            lines of condescension, so it stays fresh long after your
+            self-esteem has not.</p>
+        </div>
+        <div class="feature">
+          <div class="fnum">03</div>
+          <h3>Rain is included</h3>
+          <p>The live site types its verdict at you, slowly, over a moody
+            blue downpour. The drama is not a bug. It is the whole point.</p>
+        </div>
+        <div class="feature">
+          <div class="fnum">04</div>
+          <h3>Built by FastAPI, served as files</h3>
+          <p>The pages are rendered by a FastAPI app at build time and published
+            as static files, so there is no server left to fall over. Even the
+            sarcasm respects the dependency direction.</p>
+        </div>
+        <div class="feature">
+          <div class="fnum">05</div>
+          <h3>Tested to the last branch</h3>
+          <p>Coverage is gated at 100% with branch coverage on; the gate lives
+            in the config rather than a command line, so it cannot be
+            forgotten. The insults are frivolous; the build is not.</p>
+        </div>
+        <div class="feature">
+          <div class="fnum">06</div>
+          <h3>It degrades, it does not die</h3>
+          <p>If the quote list fails to load, the page keeps typing the line it
+            already has rather than going blank. A joke site showing an error
+            is worse than one repeating itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="use">
+    <div class="container">
+      <div class="eyebrow">Use it</div>
+      <h2 class="section-title">One request away from being told off</h2>
+      <p class="section-sub">Fetch the list once and pick your own line.
+        Anything that speaks HTTP and JSON can do it.</p>
+      <div class="terminal">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <pre><span class="cmt"># ask nicely; get told the truth</span>
+<span class="prompt">$</span> curl -s https://www.snarkapi.com/quotes.json | jq -r '.[]' | shuf -n 1
+You&#8217;ve achieved the rare feat of being wrong in several dimensions.</pre>
+      </div>
+      <p class="endpoint">File: <code>GET /quotes.json</code> on
+        <code>https://www.snarkapi.com</code>, a JSON list of strings. Or just
+        open the <a href="https://www.snarkapi.com/">live site</a> and let it type
+        at you. The old <code>/api/v1/sarcasm/</code> endpoint is retired: the
+        site is now static files, which cannot pick a line per request.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>SnarkAPI</strong>: condescension as a service<br>
+      (c) Oliver Ernster · Built with FastAPI · GPL-3.0 ·
+      v<!--VERSION-->1.5.0<!--/VERSION-->
+    </div>
+    <div class="footer-links">
+      <a href="https://www.snarkapi.com/">Live site</a>
+      <a href="https://github.com/oernster/snark-as-a-service">GitHub</a>
+      <a href="https://www.crankthecode.com/">crankthecode.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Demo typewriter: cycles a few sample lines to show what the live site does.
+  // These are sample lines for the landing only; the real supply lives in the
+  // service. Type -> hold -> wipe -> next, forever.
+  (() => {
+    const screen = document.getElementById('demo-screen')
+    if (!screen) return
+
+    const SAMPLES = [
+      'You’ve achieved the rare feat of being wrong in several dimensions.',
+      'You treat regression like a form of nostalgia.',
+      'You scale systems like someone rearranging sand during a storm.',
+      'You treat logs like personal diary entries.',
+      'You’ve weaponized ambiguity.',
+    ]
+    const TYPE_MS = 55
+    const DELETE_MS = 26
+    const HOLD_MS = 2600
+    const GAP_MS = 500
+
+    const textNode = document.createTextNode('')
+    const caret = document.createElement('span')
+    caret.className = 'caret'
+    caret.setAttribute('aria-hidden', 'true')
+    caret.textContent = '▋'
+    screen.appendChild(textNode)
+    screen.appendChild(caret)
+
+    let idx = 0
+    let i = 0
+    let phase = 'typing'
+    const current = () => SAMPLES[idx % SAMPLES.length]
+
+    function tick() {
+      const text = current()
+      if (phase === 'typing') {
+        i += 1
+        textNode.nodeValue = text.slice(0, i)
+        if (i >= text.length) { phase = 'holding'; setTimeout(tick, HOLD_MS) }
+        else setTimeout(tick, TYPE_MS)
+      } else if (phase === 'holding') {
+        phase = 'deleting'; setTimeout(tick, DELETE_MS)
+      } else {
+        i -= 1
+        textNode.nodeValue = text.slice(0, Math.max(i, 0))
+        if (i <= 0) { idx += 1; i = 0; phase = 'typing'; setTimeout(tick, GAP_MS) }
+        else setTimeout(tick, DELETE_MS)
+      }
+    }
+    setTimeout(tick, GAP_MS)
+  })()
+</script>
+
+<script>
+  // Subtle canvas rain, echoing the live site. Pauses when the tab is hidden.
+  (() => {
+    const canvas = document.getElementById('rain')
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+
+    const DROP_COUNT = 150
+    const MIN_LENGTH = 8
+    const MAX_LENGTH = 22
+    const MIN_SPEED = 4
+    const MAX_SPEED = 12
+    const SLANT = 1.3
+    const LINE_WIDTH = 1.1
+    const DROP_COLOR =
+      getComputedStyle(document.documentElement)
+        .getPropertyValue('--rain')
+        .trim() || 'rgba(174, 194, 255, 0.5)'
+
+    let width = 0
+    let height = 0
+    let drops = []
+    const rand = (min, max) => min + Math.random() * (max - min)
+    const makeDrop = () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      len: rand(MIN_LENGTH, MAX_LENGTH),
+      speed: rand(MIN_SPEED, MAX_SPEED),
+    })
+
+    function resize() {
+      const dpr = window.devicePixelRatio || 1
+      width = canvas.clientWidth
+      height = canvas.clientHeight
+      canvas.width = width * dpr
+      canvas.height = height * dpr
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      drops = Array.from({ length: DROP_COUNT }, makeDrop)
+    }
+
+    function frame() {
+      ctx.clearRect(0, 0, width, height)
+      ctx.strokeStyle = DROP_COLOR
+      ctx.lineWidth = LINE_WIDTH
+      ctx.lineCap = 'round'
+      for (const d of drops) {
+        ctx.beginPath()
+        ctx.moveTo(d.x, d.y)
+        ctx.lineTo(d.x + SLANT, d.y + d.len)
+        ctx.stroke()
+        d.x += SLANT * (d.speed / MAX_SPEED)
+        d.y += d.speed
+        if (d.y > height) { d.y = -d.len; d.x = Math.random() * width }
+      }
+      requestAnimationFrame(frame)
+    }
+
+    window.addEventListener('resize', resize)
+    resize()
+    requestAnimationFrame(frame)
+  })()
+</script>
+</body>
+</html>
