@@ -22,7 +22,7 @@ This repository owns the host root, so it carries the crawler surface for every 
 
 - `robots.txt`: the single robots file for the host (crawlers read it only at the root).
 - `sitemap.xml`: the hub sitemap listing the hub pages and every page of every project site on the host bar one. Project repositories ship no sitemap or robots of their own; when a project site gains a page, its URL is added here. The exception is 3D-printing-info, whose build generates its own `docs/sitemap.xml`; `robots.txt` names it beside the hub sitemap, so its URLs are not repeated here. `snarkapi/` is not listed either: it holds a copy of the SnarkAPI product pages, maintained here by hand, whose canonical home is snarkapi.com and whose own sitemap lists them.
-- Every page carries a canonical URL. The content pages also carry Open Graph and Twitter card metadata; the redirect stubs (`other.html`, `standards.html` and the pages under `fulcrum/`, which send the old ernster.dev/fulcrum/ addresses on to decitect.com now that the project is Decitect on its own domain) carry only a canonical pointing at their destination. The home page carries Person and WebSite JSON-LD and the Google site verification tag.
+- Every page carries a canonical URL. The content pages also carry Open Graph and Twitter card metadata; the two redirect stubs (`other.html`, `standards.html`) carry only a canonical pointing at their destination. The home page carries Person and WebSite JSON-LD and the Google site verification tag.
 
 ## Licence
 
