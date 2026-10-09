@@ -189,7 +189,7 @@ a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none;
 @media (max-width: 860px) { .proof .stats { grid-template-columns: repeat(2, 1fr); } }
 .proof .stat { border-top: 1px solid var(--border); padding-top: 12px; }
 /* The figure line carries a finding rather than a number, so it wraps: the
-   numbers themselves live on Fulcrum's pages and are not restated here. */
+   numbers themselves live on Decitect's pages and are not restated here. */
 .proof .figure { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; text-wrap: balance; }
 @media (max-width: 420px) { .proof .figure { font-size: 17px; } }
 .proof .cap { color: var(--muted); font-size: 13.5px; margin-top: 6px; }

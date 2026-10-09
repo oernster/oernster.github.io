@@ -76,7 +76,7 @@
         <li><a href="https://timeribbon.world/"><strong>TimeRibbon</strong></a> lets one package import Go's network packages: the update check. Further tests hold every program it starts and every Windows library it loads to named lists and forbid the page a request of its own.</li>
         <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> makes exactly one outbound call, disclosed in full in its README; your own mail client carries the games.</li>
         <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> lets seven packages open a connection: IMAP, POP3, SMTP, CalDAV, Microsoft sign-in, the images you choose to load and the update check. A test fails any other package that imports a listed network root; another fails a page script that makes a request of its own.</li>
-        <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> and <a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> each open one connection themselves, the update check. A test fails any module of the application, its setup program or its entry point that imports a listed networking module; a second holds the update check to one standard library call.</li>
+        <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> and <a href="https://decitect.com/"><strong>Decitect</strong></a> each open one connection themselves, the update check. A test fails any module of the application, its setup program or its entry point that imports a listed networking module; a second holds the update check to one standard library call.</li>
         <li><a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> names six ways out and pins five of them to one home each: the feed fetcher, which also carries Feedly's search, the update check, the one component that asks Wikipedia for suggestions and the one that draws YouTube's player. Its parsers hold the images a feed points at to https.</li>
       </ul>
     </section>
@@ -88,7 +88,7 @@
         <li><a href="https://pigeonpost.ink/"><strong>PigeonPost</strong></a> removes mail from your provider's server only when you delete it or a rule you wrote does so; syncing only reads. Events travel as ICS and contacts as vCard or CSV, each format with a test that writes a record, reads it back and compares the fields.</li>
         <li><a href="https://symdiary.com"><strong>SymDiary</strong></a> exports its record as versioned JSON and imports it again; a test fails unless every format version it has written has a reader and a frozen sample that still reads back.</li>
         <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> backs up every account and every budget to one file. A damaged or truncated backup is refused before any live file changes; a restore that fails part way puts the originals back.</li>
-        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> exports a plan as JSON that a test reads back with the same organisation and moves; it also writes the report as one HTML file with nothing fetched from elsewhere.</li>
+        <li><a href="https://decitect.com/"><strong>Decitect</strong></a> exports a plan as JSON that a test reads back with the same organisation and moves; it also writes the report as one HTML file with nothing fetched from elsewhere.</li>
       </ul>
     </section>
 
@@ -124,7 +124,7 @@
         <li><a href="https://timeribbon.world/"><strong>TimeRibbon</strong></a> keeps an unreadable settings file under the first free name and refuses every save for the rest of the run if it cannot.</li>
         <li><a href="https://narratex.co.uk"><strong>NarrateX</strong></a> moves a damaged bookmark or preferences file aside before any save and names it when the book opens; a file it cannot read is never written over.</li>
         <li><a href="https://ernster.dev/FancyClock/"><strong>FancyClock</strong></a> copies a damaged alarms file aside before the first save and names the copy in its warning.</li>
-        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> keeps an autosave that will not load and seals the store if it cannot move it, so a later save never lands on the original.</li>
+        <li><a href="https://decitect.com/"><strong>Decitect</strong></a> keeps an autosave that will not load and seals the store if it cannot move it, so a later save never lands on the original.</li>
         <li><a href="https://clearbudget.co.uk/"><strong>ClearBudget</strong></a> moves stray budget files to a quarantine folder of their own rather than adopting or deleting them.</li>
       </ul>
     </section>
@@ -133,7 +133,7 @@
       <h2 id="p-determinism">Same input, same answer</h2>
       <p class="rule">A number someone will act on should come out the same the second time. Randomness is seeded, time is injected and the output is pinned.</p>
       <ul class="held">
-        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> lets its model layer import only an allowlist of pure standard-library modules, so randomness and the clock are refused by default; a structural test fails if either appears.</li>
+        <li><a href="https://decitect.com/"><strong>Decitect</strong></a> lets its model layer import only an allowlist of pure standard-library modules, so randomness and the clock are refused by default; a structural test fails if either appears.</li>
         <li><a href="https://ernster.dev/latencylab/"><strong>LatencyLab</strong></a> runs a hundred seeded simulations twice and requires them to match; a golden snapshot pins the first five runs to the last digit.</li>
         <li><a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a> deploys its specification only after the conformance suite passes; pull requests run the same suite. The 300-second poll floor is pinned by a test; <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> raises any shorter interval to it.</li>
       </ul>
@@ -143,7 +143,7 @@
       <h2 id="p-planted">A guard is proved by planting the breach it forbids</h2>
       <p class="rule">A test that has never been seen to fail proves nothing. Each structural rule ships with a test that writes the forbidden line into a scratch file and fails if the rule stays quiet.</p>
       <ul class="held">
-        <li><a href="https://ernster.dev/fulcrum/"><strong>Fulcrum</strong></a> plants sixteen escapes into its model layer, from opening a file to importing the user interface; each must be caught. Sister tests do the same for the application, interface and network rules.</li>
+        <li><a href="https://decitect.com/"><strong>Decitect</strong></a> plants sixteen escapes into its model layer, from opening a file to importing the user interface; each must be caught. Sister tests do the same for the application, interface and network rules.</li>
         <li><a href="https://ernster.dev/latencylab/"><strong>LatencyLab</strong></a> plants eight escapes past its pure core, among them a dynamic import, a process launch and a raw file open; its allowlist must catch every one.</li>
         <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> plants indirect routes to the network, such as Qt's networking classes, asynchronous sockets and an import spelled at run time; its scan must flag each while passing the local sockets it does use.</li>
       </ul>
