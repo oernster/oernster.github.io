@@ -5,7 +5,7 @@
      gains a page, add its URL here. The exception is 3D-printing-info, whose
      build generates docs/sitemap.xml from its own pages; robots.txt names
      that file beside this one, so none of its URLs are repeated here. A
-     project on its OWN domain (ClearBudget, PigeonPost, NarrateX, Decitect) is a
+     project on its OWN domain (ClearBudget, PigeonPost, NarrateX, Decitect, Simquence) is a
      different host, so it owns its own robots.txt and sitemap and none of
      its URLs belong in this file. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -19,13 +19,6 @@
   <url><loc>https://ernster.dev/windows-smartscreen.html</loc></url>
   <url><loc>https://ernster.dev/commercial-licensing.html</loc></url>
   <url><loc>https://ernster.dev/principles.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/</loc></url>
-  <url><loc>https://ernster.dev/latencylab/why.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/who.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/guide.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/reading.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/app.html</loc></url>
-  <url><loc>https://ernster.dev/latencylab/download.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/</loc></url>
   <url><loc>https://ernster.dev/PlainSight/why.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/features.html</loc></url>

@@ -134,7 +134,7 @@
       <p class="rule">A number someone will act on should come out the same the second time. Randomness is seeded, time is injected and the output is pinned.</p>
       <ul class="held">
         <li><a href="https://decitect.com/"><strong>Decitect</strong></a> lets its model layer import only an allowlist of pure standard-library modules, so randomness and the clock are refused by default; a structural test fails if either appears.</li>
-        <li><a href="https://ernster.dev/latencylab/"><strong>LatencyLab</strong></a> runs a hundred seeded simulations twice and requires them to match; a golden snapshot pins the first five runs to the last digit.</li>
+        <li><a href="https://simquence.com/"><strong>Simquence</strong></a> runs a hundred seeded simulations twice and requires them to match; a golden snapshot pins the first five runs to the last digit.</li>
         <li><a href="https://ernster.dev/MMSP-Spec/"><strong>MMSP</strong></a> deploys its specification only after the conformance suite passes; pull requests run the same suite. The 300-second poll floor is pinned by a test; <a href="https://ernster.dev/meridian/"><strong>Meridian</strong></a> raises any shorter interval to it.</li>
       </ul>
     </section>
@@ -144,7 +144,7 @@
       <p class="rule">A test that has never been seen to fail proves nothing. Each structural rule ships with a test that writes the forbidden line into a scratch file and fails if the rule stays quiet.</p>
       <ul class="held">
         <li><a href="https://decitect.com/"><strong>Decitect</strong></a> plants sixteen escapes into its model layer, from opening a file to importing the user interface; each must be caught. Sister tests do the same for the application, interface and network rules.</li>
-        <li><a href="https://ernster.dev/latencylab/"><strong>LatencyLab</strong></a> plants eight escapes past its pure core, among them a dynamic import, a process launch and a raw file open; its allowlist must catch every one.</li>
+        <li><a href="https://simquence.com/"><strong>Simquence</strong></a> plants eight escapes past its pure core, among them a dynamic import, a process launch and a raw file open; its allowlist must catch every one.</li>
         <li><a href="https://ernster.dev/postal-gambit/"><strong>Postal Gambit</strong></a> plants indirect routes to the network, such as Qt's networking classes, asynchronous sockets and an import spelled at run time; its scan must flag each while passing the local sockets it does use.</li>
       </ul>
     </section>
