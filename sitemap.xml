@@ -5,8 +5,9 @@
      gains a page, add its URL here. The exception is 3D-printing-info, whose
      build generates docs/sitemap.xml from its own pages; robots.txt names
      that file beside this one, so none of its URLs are repeated here. A
-     project on its OWN domain (ClearBudget, PigeonPost, NarrateX, Decitect, Simquence) is a
-     different host, so it owns its own robots.txt and sitemap and none of
+     project on its OWN domain (ClearBudget, PigeonPost, NarrateX, Decitect,
+     Simquence, Stellody, EarthNow, SymDiary, TimeRibbon, WeatherRibbon)
+     is a different host, so it owns its own robots.txt and sitemap and none of
      its URLs belong in this file. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ernster.dev/</loc></url>
@@ -23,18 +24,38 @@
   <url><loc>https://ernster.dev/PlainSight/why.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/features.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/download.html</loc></url>
+  <url><loc>https://ernster.dev/PlainSight/documents.html</loc></url>
+  <url><loc>https://ernster.dev/PlainSight/reading.html</loc></url>
   <url><loc>https://ernster.dev/FancyClock/</loc></url>
+  <url><loc>https://ernster.dev/FancyClock/download.html</loc></url>
+  <url><loc>https://ernster.dev/FancyClock/features.html</loc></url>
+  <url><loc>https://ernster.dev/FancyClock/why.html</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/why.html</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/features.html</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/download.html</loc></url>
   <url><loc>https://ernster.dev/locus/</loc></url>
   <url><loc>https://ernster.dev/locus/why.html</loc></url>
+  <url><loc>https://ernster.dev/locus/download.html</loc></url>
+  <url><loc>https://ernster.dev/locus/features.html</loc></url>
   <url><loc>https://ernster.dev/BuildPilot/</loc></url>
+  <url><loc>https://ernster.dev/BuildPilot/download.html</loc></url>
+  <url><loc>https://ernster.dev/BuildPilot/features.html</loc></url>
+  <url><loc>https://ernster.dev/BuildPilot/why.html</loc></url>
   <url><loc>https://ernster.dev/ScreenState/</loc></url>
+  <url><loc>https://ernster.dev/ScreenState/download.html</loc></url>
+  <url><loc>https://ernster.dev/ScreenState/features.html</loc></url>
   <url><loc>https://ernster.dev/WhatDay/</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/demo.html</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/engineering.html</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/faq.html</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/features.html</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/pricing.html</loc></url>
   <url><loc>https://ernster.dev/CommandFixer/</loc></url>
   <url><loc>https://ernster.dev/CommandFixer/why.html</loc></url>
+  <url><loc>https://ernster.dev/CommandFixer/download.html</loc></url>
+  <url><loc>https://ernster.dev/CommandFixer/features.html</loc></url>
   <url><loc>https://ernster.dev/coin-analysis/</loc></url>
   <url><loc>https://ernster.dev/coin-analysis/why.html</loc></url>
   <url><loc>https://ernster.dev/elevator/</loc></url>
@@ -47,16 +68,28 @@
   <url><loc>https://ernster.dev/MMSP-Spec/spec/</loc></url>
   <url><loc>https://ernster.dev/postal-gambit/</loc></url>
   <url><loc>https://ernster.dev/postal-gambit/why.html</loc></url>
+  <url><loc>https://ernster.dev/postal-gambit/download.html</loc></url>
+  <url><loc>https://ernster.dev/postal-gambit/features.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/why.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/example-report.html</loc></url>
+  <url><loc>https://ernster.dev/o7Debrief/download.html</loc></url>
+  <url><loc>https://ernster.dev/o7Debrief/features.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/why.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/how-it-works.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/colonisation.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/carriers.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/faq.html</loc></url>
+  <url><loc>https://ernster.dev/EDColonisationAsst/download.html</loc></url>
+  <url><loc>https://ernster.dev/EDColonisationAsst/features.html</loc></url>
   <url><loc>https://ernster.dev/BridgeTalk/</loc></url>
+  <url><loc>https://ernster.dev/BridgeTalk/download.html</loc></url>
+  <url><loc>https://ernster.dev/BridgeTalk/features.html</loc></url>
+  <url><loc>https://ernster.dev/BridgeTalk/why.html</loc></url>
   <url><loc>https://ernster.dev/3D-Printer-Launcher/</loc></url>
+  <url><loc>https://ernster.dev/3D-Printer-Launcher/download.html</loc></url>
+  <url><loc>https://ernster.dev/3D-Printer-Launcher/features.html</loc></url>
+  <url><loc>https://ernster.dev/3D-Printer-Launcher/why.html</loc></url>
   <url><loc>https://ernster.dev/snark3Dprinter-discord-bot/</loc></url>
 </urlset>
