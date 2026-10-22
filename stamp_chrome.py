@@ -34,6 +34,7 @@ SECTIONS = (
     (HOME_HREF, "Home"),
     ("applications.html", "Applications"),
     ("decision-architecture.html", "Decision Architecture"),
+    ("evergence.html", "Evergence"),
     ("tooling.html", "Tooling"),
     ("workshop.html", "Workshop"),
     ("principles.html", "Engineering Principles"),

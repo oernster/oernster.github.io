@@ -1,6 +1,6 @@
 # ernster.dev
 
-The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to my (Oliver Ernster) public work. The home page leads with two deep dives (Decision Architecture, applications); the MMSP specification and Meridian sit on the Applications page alongside the shipped apps, libraries and tooling have their own page and the Workshop hub gathers the side interests (3D printing, gaming).
+The hand-built static profile hub at [ernster.dev](https://ernster.dev): the entry point to my (Oliver Ernster) public work. The home page leads with three deep dives (Evergence, applications, Decision Architecture); Evergence has a section page of its own, carrying the two civic documents beside it; the MMSP specification and Meridian sit on the Applications page alongside the shipped apps, libraries and tooling have their own page and the Workshop hub gathers the side interests (3D printing, gaming).
 
 ## Who this is for
 
