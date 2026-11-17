@@ -27,6 +27,7 @@
   <url><loc>https://ernster.dev/PlainSight/download.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/documents.html</loc></url>
   <url><loc>https://ernster.dev/PlainSight/reading.html</loc></url>
+  <url><loc>https://ernster.dev/PlainSight/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/FancyClock/</loc></url>
   <url><loc>https://ernster.dev/FancyClock/download.html</loc></url>
   <url><loc>https://ernster.dev/FancyClock/features.html</loc></url>
@@ -35,6 +36,7 @@
   <url><loc>https://ernster.dev/AudioDeck/why.html</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/features.html</loc></url>
   <url><loc>https://ernster.dev/AudioDeck/download.html</loc></url>
+  <url><loc>https://ernster.dev/AudioDeck/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/locus/</loc></url>
   <url><loc>https://ernster.dev/locus/why.html</loc></url>
   <url><loc>https://ernster.dev/locus/download.html</loc></url>
@@ -43,16 +45,27 @@
   <url><loc>https://ernster.dev/BuildPilot/download.html</loc></url>
   <url><loc>https://ernster.dev/BuildPilot/features.html</loc></url>
   <url><loc>https://ernster.dev/BuildPilot/why.html</loc></url>
+  <url><loc>https://ernster.dev/BuildPilot/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/ScreenState/</loc></url>
   <url><loc>https://ernster.dev/ScreenState/download.html</loc></url>
   <url><loc>https://ernster.dev/ScreenState/features.html</loc></url>
+  <url><loc>https://ernster.dev/ScreenState/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/WhatDay/</loc></url>
+  <url><loc>https://ernster.dev/WhatDay/whats-new.html</loc></url>
+  <url><loc>https://ernster.dev/WebVigil/</loc></url>
+  <url><loc>https://ernster.dev/WebVigil/whats-new.html</loc></url>
+  <url><loc>https://ernster.dev/Visitron/</loc></url>
+  <url><loc>https://ernster.dev/Visitron/features.html</loc></url>
+  <url><loc>https://ernster.dev/Visitron/download.html</loc></url>
+  <url><loc>https://ernster.dev/Visitron/why.html</loc></url>
+  <url><loc>https://ernster.dev/Visitron/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/demo.html</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/engineering.html</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/faq.html</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/features.html</loc></url>
   <url><loc>https://ernster.dev/FuckWhatDay/pricing.html</loc></url>
+  <url><loc>https://ernster.dev/FuckWhatDay/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/CommandFixer/</loc></url>
   <url><loc>https://ernster.dev/CommandFixer/why.html</loc></url>
   <url><loc>https://ernster.dev/CommandFixer/download.html</loc></url>
@@ -71,11 +84,13 @@
   <url><loc>https://ernster.dev/postal-gambit/why.html</loc></url>
   <url><loc>https://ernster.dev/postal-gambit/download.html</loc></url>
   <url><loc>https://ernster.dev/postal-gambit/features.html</loc></url>
+  <url><loc>https://ernster.dev/postal-gambit/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/why.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/example-report.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/download.html</loc></url>
   <url><loc>https://ernster.dev/o7Debrief/features.html</loc></url>
+  <url><loc>https://ernster.dev/o7Debrief/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/why.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/how-it-works.html</loc></url>
@@ -84,10 +99,12 @@
   <url><loc>https://ernster.dev/EDColonisationAsst/faq.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/download.html</loc></url>
   <url><loc>https://ernster.dev/EDColonisationAsst/features.html</loc></url>
+  <url><loc>https://ernster.dev/EDColonisationAsst/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/BridgeTalk/</loc></url>
   <url><loc>https://ernster.dev/BridgeTalk/download.html</loc></url>
   <url><loc>https://ernster.dev/BridgeTalk/features.html</loc></url>
   <url><loc>https://ernster.dev/BridgeTalk/why.html</loc></url>
+  <url><loc>https://ernster.dev/BridgeTalk/whats-new.html</loc></url>
   <url><loc>https://ernster.dev/3D-Printer-Launcher/</loc></url>
   <url><loc>https://ernster.dev/3D-Printer-Launcher/download.html</loc></url>
   <url><loc>https://ernster.dev/3D-Printer-Launcher/features.html</loc></url>
